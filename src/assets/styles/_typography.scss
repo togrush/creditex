@@ -1,0 +1,58 @@
+body,
+.body-text {
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading {
+  font-weight: 500;
+}
+
+h1,
+.heading_1 {
+  font-size: 79px;
+  line-height: 96%;
+
+  @media (max-width: 1680px) {
+    font-size: 64px;
+  }
+}
+
+h2,
+.heading_2 {
+  font-size: 65px;
+  line-height: 60px;
+}
+
+h3,
+.heading_3 {
+  font-size: 50px;
+}
+
+h4,
+.heading_4 {
+  font-size: 32px;
+}
+
+h5,
+.heading_5 {
+  font-size: 24px;
+}
+
+h2 {
+  // Mobile/H2 mobile;
+  @media (min-width: $layout-breakpoint-small) {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29.5px;
+  }
+}

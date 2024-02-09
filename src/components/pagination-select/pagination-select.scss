@@ -1,0 +1,33 @@
+.pagination-select {
+  position: relative;
+  width: 44px;
+  height: 24px;
+
+  select {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    color: $black-6;
+    appearance: none;
+  }
+
+  &__arrow {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+.business-requirements {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    padding: 134px 119px 145px;
+    column-gap: 104px;
+    background-color: $white-1;
+  }
+
+  p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &__text {
+    z-index: 10;
+    display: flex;
+    max-width: 749px;
+    flex-direction: column;
+    row-gap: 45px;
+
+    & > h2 {
+      color: $black-3;
+    }
+
+    & > p {
+      color: $gray-2;
+    }
+  }
+
+  &__requirement {
+    z-index: 10;
+    display: flex;
+    padding: 24px 40px;
+    border: 1px solid $gray-4;
+    border-radius: $radius-bit-less;
+    flex: 0 0 376px;
+    flex-direction: column;
+    row-gap: 16px;
+
+    & > p {
+      color: $black-1;
+    }
+  }
+
+  &__requirement-icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow-green-2;
+
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: 35px;
+    right: -338px;
+    width: 666px;
+    height: 666px;
+    border-radius: 50%;
+    background-color: $yellow-green-1;
+  }
+}

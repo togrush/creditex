@@ -1,0 +1,31 @@
+@import 'Components/ways-of-working-card/ways-of-working-card.scss';
+
+.ways-of-working {
+  &__wrapper {
+    display: flex;
+    padding: 111px 54px;
+    flex-direction: column;
+    align-items: center;
+    background-color: $black-4;
+    row-gap: 40px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $white-1;
+    row-gap: 25px;
+
+    & > p {
+      font-size: 18px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 14px;
+  }
+}

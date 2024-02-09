@@ -1,0 +1,9 @@
+{
+  "status": "error",
+  "error-info": [
+    {
+      "control-name": "confirmation-code",
+      "error-text": "Неверный код"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+mixin form-checkbox(nameOrID, label)
+  label.form-checkbox(for=nameOrID)
+    input(type='checkbox', id=nameOrID, name=nameOrID)&attributes(attributes)
+    span #{label}

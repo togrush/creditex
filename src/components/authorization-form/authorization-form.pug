@@ -1,0 +1,18 @@
+form.authorization-form.full-screen-form(name='authorization-form', id='authorization-form', data-location-href = './broker-lk.html', method='POST', action='/auth/')
+  h4 Авторизация
+  .authorization-form__inner.full-screen-form__inner
+    .authorization-form__controls.full-screen-form__controls
+      include UIKit/form-control/form-control.pug
+      +form-control('tel', 'auth-phone', 'Телефон')(class='authorization-form__phone-control', autocomplete='username')
+      include UIKit/form-password/form-password.pug
+      +form-control('password', 'auth-password', 'Пароль')(class='authorization-form__password-control', autocomplete='current-password')
+      .authorization-form__row.full-screen-form__row
+        include UIKit/form-checkbox/form-checkbox.pug
+        +form-checkbox('auth-remember-user', 'Запомнить меня')(class='authorization-form__remember-user-checkbox', checked=true)
+        include UIKit/button/button.pug
+        +button('auth-forgot-password-button', './restorePassword.html', 'button', 'link', 'Забыли пароль?')(class='authorization-form__forgot-password-button')
+    .authorization-form__buttons.full-screen-form__buttons
+      +button('auth-to-registration-button', './registration.html', 'button', 'secondary', 'Регистрация')(class='authorization-form__to-registration-button')
+      +button('auth-come-in-button', '', 'submit', 'primary', 'Войти')(class='authorization-form__come-in-button')
+
+

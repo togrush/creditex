@@ -1,0 +1,15 @@
+.how-it-work {
+  &__wrapper {
+    background-color: $black-4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 78px;
+    padding: 79px 54px 150px;
+
+    h2 {
+      color: $white-1;
+    }
+  }
+}

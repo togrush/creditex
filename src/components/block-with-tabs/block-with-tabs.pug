@@ -1,0 +1,18 @@
+mixin block-with-tabs(tabsArray)
+  .block-with-tabs&attributes(attributes)
+    .block-with-tabs__tabs-inner
+      each tab, index in tabsArray
+        include Components/tab/tab.pug
+        if index === 0
+          +tab(tab.tabName)(class='block-with-tabs__tab-name tab_active')
+        else
+          +tab(tab.tabName)(class='block-with-tabs__tab-name')
+    .block-with-tabs__tab-content-inner
+      each tab, index in tabsArray
+        include Components/product-line-tab-content/product-line-tab-content.pug
+        if index === 0
+          +product-line-tab-content(tab.tabContent)(class='tab__content block-with-tabs__tab-content')
+        else
+          +product-line-tab-content(tab.tabContent)(class='tab__content tab__content_hide block-with-tabs__tab-content')
+
+

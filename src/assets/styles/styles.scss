@@ -1,0 +1,39 @@
+@import 'Styles/_normalize.scss';
+@import 'Styles/_null-styles.scss';
+@import 'Styles/_variables.scss';
+@import 'Styles/_fonts.scss';
+@import 'Styles/_indents.scss';
+@import 'Styles/_mixins.scss';
+@import 'Styles/_typography.scss';
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  padding: 0 70px;
+  margin: 0 auto;
+  @media (min-width: $layout-breakpoint-small) {
+    padding: 0 16px;
+  }
+
+  &_user-account {
+    padding: 0 24px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  z-index: -10000;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  white-space: nowrap;
+  transform: scale(0);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+}

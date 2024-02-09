@@ -1,0 +1,11 @@
+form.deals-search.deals__search(name='deals-search-form', id='deals-search-form')
+  .deals-search__icon
+    include Components/svg-icon/svg-icon.pug
+    +svgIcon('search-deals')
+  input.deals-search__control(
+    type='text',
+    id='deals-search-control',
+    name='deals-search-control',
+    placeholder='Поиск по номеру заявки')&attributes(attributes)
+  include UIKit/button/button.pug
+  +button('deal-search-button', '', 'submit', 'link', 'Найти')

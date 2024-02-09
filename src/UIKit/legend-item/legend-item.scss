@@ -1,0 +1,17 @@
+.legend-item {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+
+  &__text {
+    font-size: 12px;
+    line-height: 20px;
+    color: $gray-1;
+  }
+
+  &__color {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+  }
+}

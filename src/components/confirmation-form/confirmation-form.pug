@@ -1,0 +1,13 @@
+form.confirmation-form.full-screen-form(id='confirmation-form', name='confirmation-form', method='POST', action='/auth/?register=yes')
+  .confirmation-form__title.full-screen-form__title
+    h4 Введите код из СМС
+    p Мы отправили его вам на номер указанный шагом раньше
+  .confirmation-form__inner.full-screen-form__inner
+    .confirmation-form__contrrols.full-screen-form__contrrols
+      include UIKit/form-control/form-control.pug
+      +form-control('text', 'confirmation-code', 'Код из смс')(class='confirmation-form__code-control')
+      input(type='hidden', id='confirmation-signed-data', name='SIGNED_DATA')
+    .confirmation-form__buttons.full-screen-form__buttons
+      include UIKit/button/button.pug
+      +button('confirmation-step-back-button', 'javascript:history.back()', 'button', 'transparent', 'Назад')(class='confirmation-form__step-back-button')
+      +button('confirmation-forward-button', '', 'submit', 'primary', 'Далее')(class='confirmation-form__forward-button')

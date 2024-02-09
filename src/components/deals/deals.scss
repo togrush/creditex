@@ -1,0 +1,78 @@
+@import 'UIKit/button/button.scss';
+@import 'Components/deals-search/deals-search.scss';
+@import 'UIKit/deal-status/deal-status.scss';
+@import 'Components/deals-pagination/deals-pagination.scss';
+
+.deals {
+
+  @mixin basis-calc($column-width) {
+    $div-width: 1812px;
+    $percent: 100%;
+    flex-basis: calc(($column-width / $div-width) * $percent);
+  }
+
+  div.deals__header {
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__header-left-side {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+  }
+
+  &__filter {
+    display: flex;
+    column-gap: 24px;
+  }
+
+  &__table-row {
+    display: flex;
+    padding: 20px 30px;
+    border-bottom: 1px solid $gray-20;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+
+    &_main {
+      border: none;
+      background-color: $gray-20;
+    }
+  }
+
+  &__table-col {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    &_number {
+      @include basis-calc(146px);
+    }
+
+    &_client {
+      @include basis-calc(221px);
+    }
+
+    &_inn {
+      @include basis-calc(274px);
+    }
+
+    &_date {
+      @include basis-calc(278px);
+    }
+
+    &_exemption {
+      @include basis-calc(267px);
+    }
+
+    &_format {
+      @include basis-calc(324px);
+    }
+
+    &_status {
+      @include basis-calc(150px);
+    }
+  }
+}

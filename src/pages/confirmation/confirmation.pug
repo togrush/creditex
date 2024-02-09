@@ -1,0 +1,16 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Confirmation';
+  - let username = false;
+  - let footer = false;
+  - let pageClassName = 'confirmation';
+
+block styles
+  link(href=require('./confirmation.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./confirmation.js') defer)
+
+block content
+  include Components/confirmation-form/confirmation-form.pug

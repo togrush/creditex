@@ -1,0 +1,59 @@
+@import 'Components/advantage/advantage.scss';
+
+.advantages {
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    background-color: $white-1;
+    row-gap: 40px;
+
+    &_paddings-79-100-27 {
+      padding: 79px 100px 27px;
+    }
+
+    &_paddings-62-74 {
+      padding: 62px 74px;
+    }
+
+    &_paddings-74-145 {
+      padding: 74px 145px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+  }
+
+  &__body {
+    display: flex;
+    column-gap: 51px;
+  }
+
+  &__left-column {
+    display: flex;
+    flex: 0 0 582px;
+    flex-direction: column;
+    row-gap: 20px;
+
+    @media (max-width: 1680px) {
+      flex-basis: 400px;
+    }
+  }
+
+  &__left-column-paragraphs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  &__advantages-wrapper {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 24px;
+  }
+}

@@ -1,0 +1,115 @@
+.range {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 9px;
+
+  &__input {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  &__lable {
+    font-weight: 500;
+    color: $black-1;
+  }
+
+  input[type='text'] {
+    z-index: 1;
+    width: 100%;
+    background-color: $gray-4;
+    color: $gray-1;
+    cursor: unset;
+  }
+
+  &__control {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    left: 0;
+    z-index: 1;
+    height: 18px;
+  }
+
+  &__custom-track {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background-color: $black-4;
+    transform: translateY(-50%);
+  }
+
+  input[type='range'] {
+    width: 100%;
+    background-color: transparent;
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      width: 18px;
+      height: 18px;
+      border: 4px solid $black-4;
+      border-radius: 100%;
+      background-color: $white-1;
+      cursor: pointer;
+      -webkit-appearance: none;
+
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      width: 100%;
+      height: 18px;
+      background-color: transparent;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+
+    &::-ms-track {
+      width: 100%;
+      border-color: transparent;
+      background: transparent;
+      color: transparent;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      &::-webkit-slider-thumb {
+        border-color: $gray-6;
+        cursor: unset;
+      }
+
+      &::-webkit-slider-runnable-track {
+        cursor: unset;
+      }
+
+      &::-ms-track {
+        cursor: unset;
+      }
+
+      ~ .range__custom-track {
+        background-color: $gray-6;
+      }
+    }
+  }
+
+  &__numbers-wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 20px;
+    color: $gray-1;
+  }
+
+  &__extreme-value {
+    display: flex;
+    column-gap: 3px;
+  }
+}

@@ -1,0 +1,96 @@
+// colors
+$white-1: #fff;
+$white-2: #e7e7e7; // описание в преимуществе таба
+
+$light-gray: #f6f9fc;
+
+$black-1: #000;
+$black-2: #0d0b0d;
+$black-3: #080707;
+$black-4: #12141d;
+$black-5: #262726;
+$black-6: #212121;
+
+$olive-gray: #d5e2e3; // фон блока "Зарегистрироваться"
+
+$gray-1: #828d90;
+$gray-2: #737373;
+$gray-3: #515151;
+$gray-4: #f3f4f5; // бэкграунд input rate
+$gray-5: #e5e5e5; // бэкграунд фоновых элементов графика
+$gray-6: #dcdcdcab; // бордер блока с табами
+$gray-7: #b2b2b2; // разделитель табов
+$gray-8: #3b3b3b; // текст таба
+$gray-9: #727272; // описание в теле блока активного таба
+$gray-10: #333; // фон преимуществ в табе
+$gray-11: #ddd; // бордер контролов в графике и в личном кабинете (регистрация)
+$gray-12: #dcdbdc; // бордеры элементов в личном кабинете
+$gray-13: #5b5c5b; // лэйблы в личном кабинете
+$gray-14: #d9d9d9; // область для drag&drop в личном кабинете
+$gray-15: #4f4f4f;
+$gray-16: #fbfbfb;
+$gray-17: #333;
+$gray-18: #dbdbdb;
+$gray-19: #b7b7b7;
+$gray-20: #f5f6f8;
+$gray-21: #ccc;
+$gray-22: #f6f6f6;
+$gray-23: #c7c7c7;
+$gray-24: #a0a0a0;
+$gray-25: #dfdfdf;
+$gray-26: #cacaca;
+
+$yellow-green-1: #e7f79b;
+$yellow-green-2: #dcf472;
+$yellow-green-3: #e0f484;
+
+$green-1: #0ed193; // активный пункт главного навигационного меню в хедере
+$green-2: #52c41a; // текст статуса "одобрено" в ЛК
+$green-3: #b7eb8f; // бордер статуса "одобрено" в ЛК
+$green-4: #f6ffed; // фон статуса "одобрено" в ЛК
+
+$red-1: #e25140;
+$red-2: #ffa39e;
+$red-3: #fff1f0;
+
+$orange: #febb0c;
+
+$blue-1: #1890ff;
+$blue-2: #adc6ff;
+$blue-3: #f0f5ff;
+
+// background colors
+$background-1: $white-1;
+$background-2: $light-gray;
+$background-3: $olive-gray;
+$background-4: $yellow-green-1;
+$background-5: $yellow-green-2;
+
+// radius
+$radius-extra-small: 2px;
+$radius-small: 4px;
+$radius-bit-less: 8px;
+$radius-medium: 16px;
+$radius: 24px;
+
+// shadows
+$shadow-1: 0px 1px 11px 0px rgba(0, 0, 0, 0.05);
+$shadow-yellow-green-round: 0px 0px 15px 16px rgba(220, 244, 114, 0.47);
+$shadow-active-tab: 0px 0px 43px 0px rgba(0, 0, 0, 0.07);
+
+// transitions
+$transition-default-duration: .3s;
+$transition-default-timing-func: ease-in-out;
+
+// indents
+$section-mb: 40px;
+
+// tabs
+$tab-bg-color: $gray-16;
+$tab-text-color: $gray-8;
+$tab-separator-color: $gray-7;
+$tab-card-bg-color: $gray-17;
+
+// breakpoint
+
+$layout-breakpoint-small: 320px;

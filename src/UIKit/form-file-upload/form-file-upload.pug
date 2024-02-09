@@ -1,0 +1,48 @@
+mixin form-file-upload(idAndName, fileExtensions, fileSize, emptyText, instruction, isMultiple, isPreview)
+  .form-file-upload
+    .form-file-upload__preview.visually-hidden(id='preview')
+
+    label.form-file-upload__label(id='drop-zone', for=idAndName + '-buffer')
+      input(
+        hidden,
+        id=idAndName + '-buffer',
+        type='file',
+        multiple=isMultiple,
+        accept=fileExtensions.map(item => `.${item}`).join(', '),
+        size=fileSize * 1024 * 1024,)
+      input.visually-hidden(
+        id=idAndName,
+        name=idAndName,
+        type='file',
+        multiple=isMultiple,
+        accept=fileExtensions.map(item => `.${item}`).join(', '),
+        size=fileSize * 1024 * 1024,
+        data-is-preview=`${isPreview}`,
+        aria-describedby="hint")&attributes(attributes)
+      .form-file-upload__icon
+        include Components/svg-icon/svg-icon.pug
+        +svgIcon('empty-file-control')
+      .form-file-upload__text.form-file-upload__text_empty(id='empty')
+        p(id='hint')
+          span #{emptyText}
+          each extension, index in fileExtensions
+            if index + 1 === fileExtensions.length
+              span #{extension})
+            else
+              span #{extension},&nbsp;
+        if fileSize
+          p
+            span Максимальный размер #{isMultiple ? 'файлов' : 'файла'} – #{fileSize}МБ
+      .form-file-upload__text.form-file-upload__text_loaded.form-file-upload__text_hidden(id='loaded')
+      template(id='loaded-file-template')
+        .form-file-upload__loaded-file
+          p
+          .form-file-upload__delete
+            include Components/svg-icon/svg-icon.pug
+            +svgIcon('delete')
+      include UIKit/form-control-error/form-control-error.pug
+      +form-control-error()(class='form-file-upload__error')
+
+    if instruction
+      .form-file-upload__instruction-link
+        a(href=instruction.link, target='_blank') #{instruction.text}

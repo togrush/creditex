@@ -1,0 +1,4 @@
+mixin form-step(stepText, stepIndex)
+  .form-step(id=`form-step-${stepIndex}`)&attributes(attributes)
+    span.form-step__number #{stepIndex}
+    span.form-step__text #{stepText}

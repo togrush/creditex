@@ -1,0 +1,9 @@
+{
+  "status": "error",
+  "error-info": [
+    {
+      "control-name": "registration-phone",
+      "error-text": "Пользователь уже существует"
+    }
+  ]
+}

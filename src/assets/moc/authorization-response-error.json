@@ -1,0 +1,9 @@
+{
+  "status": "error",
+  "error-info": [
+    {
+      "control-name": "undefined",
+      "error-text": "Текст ошибки от back"
+    }
+  ]
+}

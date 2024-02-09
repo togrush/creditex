@@ -1,0 +1,16 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Registration';
+  - let username = false;
+  - let footer = false;
+  - let pageClassName = 'registration';
+
+block styles
+  link(href=require('./registration.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./registration.js') defer)
+
+block content
+  include Components/registration-form/registration-form.pug

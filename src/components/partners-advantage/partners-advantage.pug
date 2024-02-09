@@ -1,0 +1,16 @@
+mixin partners-advantage(isImageLeftPosition, imageName, bgModifier, textContent)
+  section.section.partners-advantage
+    .container
+      .section__wrapper.partners-advantage__wrapper(class=`partners-advantage__wrapper_${bgModifier}`)
+        if isImageLeftPosition
+          include Components/partners-advantage/_partners-advantage-image.pug
+          +partners-advantage-image(imageName)
+
+          include Components/partners-advantage/_partners-advantage-text-content.pug
+          +partners-advantage-text-content(textContent)
+        else
+          include Components/partners-advantage/_partners-advantage-text-content.pug
+          +partners-advantage-text-content(textContent)
+
+          include Components/partners-advantage/_partners-advantage-image.pug
+          +partners-advantage-image(imageName)

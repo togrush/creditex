@@ -1,0 +1,157 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'New application';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'new-application';
+
+block styles
+  link(href=require('./new-application.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./new-application.js') defer)
+
+block content
+  .container_user-account
+    include Components/form-steps/form-steps.pug
+    +form-steps(['Заведение заявки', 'Загрузка данных', 'Решение'])
+
+    form(id='new-application-form', name='new-application-form', action='./moc/new-application-response-success.json', method='GET')
+
+      include UIKit/form-control/form-control.pug
+      include UIKit/button/button.pug
+
+      .new-application__form-section.new-application__form-section_step-1(id='step-1')
+        .new-application__form-section-wrapper
+          .new-application__form-block
+            .new-application__form-block-title
+            .new-application__controls-group
+              include UIKit/form-select/form-select.pug
+              +form-select('user-type', [{
+                text: 'ИП',
+                value: 'ip'
+              }, {text: 'ООО', value: 'ooo'}], 'Выберите форму регистрации')
+              +form-control('text', 'inn', 'Введите ИНН')(required)
+              +form-control('text', 'fio', 'ФИО')(required)
+              +form-control('email', 'email', 'Электронная почта')(required)
+              +form-control('tel', 'phone-number', 'Телефон')(required)
+              +button('go-to-step-2', '', 'button', 'primary', 'Далее')(class='button_wide')
+
+      .new-application__form-section.new-application__form-section_step-2.visually-hidden(id='step-2')
+        include UIKit/form-file-upload/form-file-upload.pug
+
+        .new-application__ip.visually-hidden
+          .new-application__form-section-wrapper
+            .new-application__form-block
+              .new-application__form-block-title
+                h5 Выписка из банка за 24 месяца
+              .new-application__controls-group
+                +form-file-upload('statement-from-the-bank', ['xl', '1C'], 5, 'Кликните на пустую область или перетащите файл (', {
+                  link: '#',
+                  text: 'Инструкция к пользованию'
+                }, false, false)
+
+        .new-application__ooo
+          .new-application__form-section-wrapper
+            .new-application__form-block
+              .new-application__form-block-title
+                h5 Карточка 51 счета
+                p за последние 24 календарных месяца
+              .new-application__controls-group
+                +form-file-upload('card-51', ['xl'], 5, 'Кликните на пустую область или перетащите файл (', {
+                  link: '#',
+                  text: 'Инструкция к пользованию'
+                }, false, false)
+            .new-application__form-block
+              .new-application__form-block-title
+                h5 Бухгалтерская отчетность 1 и 2 формы
+                p за последнюю дату отчетности
+              .new-application__controls-group
+                +form-file-upload('financial-statements', ['pdf'], 5, 'Кликните на пустую область или перетащите файл (', {
+                  link: '#',
+                  text: 'Инструкция к пользованию'
+                }, false, false)
+
+        .new-application__buttons-group
+          +button('return-to-step-1', '', 'button', 'transparent', 'Назад')(class='button_wide')
+          +button('skip-to-step-3', '', 'button', 'secondary', 'Пропустить')(class='button_wide')
+          +button('go-to-step-3', '', 'button', 'primary', 'Далее')(class='button_wide')
+
+      .new-application__form-section.new-application__form-section_step-3.visually-hidden(id='step-3')
+        .new-application__form-section-wrapper
+          .new-application__form-block
+            .new-application__form-block-title
+              h5 Добавить скан паспорта
+            .new-application__controls-group
+              +form-file-upload('passport', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', true, true)(required)
+              .new-application__controls-group-wrapper
+                +form-control('text', 'passport-series', 'Серия')(required)
+                +form-control('text', 'passport-number', 'Номер')(required)
+                +form-control('text', 'passport-issued', 'Кем выдан')(required)
+                +form-control('text', 'passport-date', 'Когда выдан')(required, 'data-type="date"')
+              +form-control('text', 'passport-fio', 'ФИО')(required)
+          .new-application__form-block
+            .new-application__form-block-title
+              h5 Загрузка банковской выписки
+            .new-application__controls-group
+              +button('send-from-bank-client', '#', '', 'tertiary', 'Отправить из клиента банка')(class='button_wide')
+              +form-file-upload('bank-statement', ['jpg', 'jpeg', 'png', 'pdf'], 5, 'Кликните на пустую область или перетащите файл (', '', false, false)
+          .new-application__form-block
+            .new-application__form-block-title
+              h5 Выберите тип кредита
+            .new-application__controls-group.new-application__controls-group_custom
+              include UIKit/form-radio/form-radio.pug
+              +form-radio('credit-type', [
+                {id: 'circulating', checked: false, text: 'Оборотный кредит'},
+                {
+                  id: 'investment',
+                  checked: false,
+                  text: 'Инвестиционный кредит'
+                },
+                {
+                  id: 'for-contracts',
+                  checked: false,
+                  text: 'Кредит под контракты'
+                },
+                {id: 'mortgage', checked: false, text: 'Ипотека'},
+                {id: 'leasing', checked: false, text: 'Лизинг'},
+              ])(required)
+              include UIKit/form-range/form-range.pug
+              +form-range('security-amount', 'Выберите или введите сумму залога', 500000, 27000000, {
+                one: '₽',
+                two: '₽',
+                five: '₽'
+              }, 3000000, false, false)
+              + form-range('credit_term', 'Выберите срок кредита ', 1, 10, {
+                one: 'год',
+                two: 'года',
+                five: 'лет'
+              }, 3, false, true)
+          .new-application__form-block
+            .new-application__form-block-title
+              h5 Выберите тип обеспечения
+            .new-application__controls-group
+              include UIKit/form-radio/form-radio.pug
+              +form-radio('collateral-type', [
+                {
+                  id: 'without-collateral',
+                  checked: false,
+                  text: 'Без залога'
+                },
+                {
+                  id: 'with-collateral',
+                  checked: false,
+                  text: 'С залогом'
+                },
+              ])(required)
+        .new-application__buttons-group
+          +button('return-to-step-2', '', 'button', 'transparent', 'Назад')(class='button_wide')
+          +button('submit-form', '', 'submit', 'primary', 'Далее')(class='button_wide', form='new-application-form')
+
+      .new-application__form-section.new-application__form-section_step-thankth.visually-hidden(id='thanks-step')
+        .new-application__form-block-title
+          h4 Спасибо!
+          h5 Ваша заявка на рассмотрении
+          p Свяжемся с Вами в течении 3 часов
+        +button('go-to-lk', './brokerLk.html', '', 'primary', 'В личный кабинет')(class='button_wide')

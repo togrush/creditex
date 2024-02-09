@@ -1,0 +1,15 @@
+mixin howItWork(svgImage='')
+  section.section.how-it-work
+    .container
+      .section__wrapper.how-it-work__wrapper
+        h2 Как это работает?
+
+        if svgImage === 'small'
+          .how-it-work__scheme-row
+            include Images/how-it-work/how-it-work-scheme--top-row.pug
+          .how-it-work__scheme-row
+            include Images/how-it-work/how-it-work-scheme--bottom-row.pug
+
+        if svgImage === 'big'
+          .how-it-work__scheme-row
+            include Images/how-it-work/how-it-work-scheme--big.pug

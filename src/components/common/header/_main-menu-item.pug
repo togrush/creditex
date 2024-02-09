@@ -1,0 +1,5 @@
+mixin main-manu-item(link, headerClass, pathname)
+  li.main-menu-item(class=`${headerClass}__main-menu-item`)
+    include UIKit/button/button.pug
+    +button('', link.href, '', 'link', link.text)&attributes(
+      attributes)(data-pathname=`${pathname}`)

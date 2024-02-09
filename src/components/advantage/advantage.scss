@@ -1,0 +1,38 @@
+.advantage {
+  padding: 24px 40px;
+  min-height: 275px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  width: 33%;
+  max-width: 494px;
+
+  &_bordered {
+    border: 1px solid $gray-4;
+    border-radius: $radius-bit-less;
+  }
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: $yellow-green-2;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+  }
+
+  &__paragraphs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    color: $gray-3;
+
+  }
+}

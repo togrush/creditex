@@ -1,0 +1,31 @@
+.form-step {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+  font-size: 21px;
+  font-weight: 400;
+
+  &__text {
+    color: $black-1;
+  }
+
+  &__number {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $gray-20;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-1;
+    color: $gray-21;
+  }
+
+  &_active {
+    .form-step__number {
+      border-color: $orange;
+      background-color: $orange;
+      color: $white-1;
+    }
+  }
+}

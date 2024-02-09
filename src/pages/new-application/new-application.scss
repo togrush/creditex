@@ -1,0 +1,131 @@
+@import 'Layouts/user-account-pages-layout/user-account-pages-layout.scss';
+
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/button/button.scss';
+@import 'UIKit/form-file-upload/form-file-upload.scss';
+@import 'UIKit/form-radio/form-radio.scss';
+@import 'UIKit/form-range/form-range.scss';
+@import 'UIKit/form-select/form-select.scss';
+
+@import 'Components/form-steps/form-steps.scss';
+
+.new-application {
+  padding-top: 32px;
+
+  &__form-section {
+    padding: 50px;
+    border-bottom-left-radius: $radius-bit-less;
+    border-bottom-right-radius: $radius-bit-less;
+    margin-bottom: 60px;
+    background-color: $white-1;
+
+    &_step-1 {
+      .new-application__controls-group {
+        max-width: 459px;
+      }
+    }
+
+    &_step-2 {
+      .new-application__controls-group {
+        max-width: 824px;
+      }
+    }
+
+    &_step-3 {
+      .new-application__controls-group {
+        max-width: 651px;
+      }
+
+      .new-application__buttons-group {
+        margin-top: 50px;
+      }
+    }
+
+    &_step-thankth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 85px;
+
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      h5 {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__form-section-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 48px;
+  }
+
+  &__form-block {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 32px;
+  }
+
+  &__controls-group {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 24px;
+
+    &_custom {
+      max-width: unset !important;
+
+      .form-radio {
+        margin-bottom: 10px;
+      }
+
+      .range {
+        max-width: 651px;
+      }
+    }
+  }
+
+  &__controls-group-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    column-gap: 16px;
+    row-gap: 24px;
+
+    & > * {
+      width: calc((100% - 16px) / 2);
+    }
+  }
+
+  &__form-block-title {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+
+    & > h5,
+    & > p {
+      color: $black-1;
+    }
+  }
+
+  &__buttons-group {
+    display: flex;
+    margin-top: 32px;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+  }
+}

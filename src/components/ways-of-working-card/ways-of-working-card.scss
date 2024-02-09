@@ -1,0 +1,37 @@
+.ways-of-working-card {
+  display: flex;
+  padding: 24px 40px;
+  border: 1px solid $gray-4;
+  border-radius: $radius-bit-less;
+  flex: 0 0 475px;
+  flex-direction: column;
+  background-color: $gray-3;
+  row-gap: 16px;
+
+  &__icon {
+    display: flex;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow-green-2;
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    & > span {
+      font-size: 30px;
+      color: $gray-18;
+    }
+
+    & > p {
+      font-size: 15px;
+      color: $gray-19;
+    }
+  }
+}

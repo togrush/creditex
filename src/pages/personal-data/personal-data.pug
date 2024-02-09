@@ -1,0 +1,43 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Personal Data';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'personal-data';
+
+block styles
+  link(href=require('./personal-data.scss') rel='stylesheet')
+
+block scripts
+
+block content
+  .container_user-account
+    include Components/user-data-block/user-data-block.pug
+    +user-data-block(
+      'Персональные данные',
+      [
+        {dataItems: ['Иванов Иван Иванович'], description: 'ФИО'},
+        {dataItems: ['123@gmail.com'], description: 'Email'},
+        {dataItems: ['+7 (937) 676-54-34'], description: 'Телефон'},
+        {dataItems: ['123456789012'], description: 'ИНН'},
+        {dataItems: ['123456789012'], description: 'ИП'},
+      ],
+      [
+        {
+          id: 'change-password-button',
+          href: './auth/?change_password=yes',
+          type: '',
+          visualType: 'primary',
+          text: 'Изменить пароль',
+        },
+        {
+          id: 'documents-button',
+          href: '#',
+          type: '',
+          visualType: 'primary',
+          text: 'Документы',
+        },
+      ],
+      {modifier: 'personal-data'}
+    )

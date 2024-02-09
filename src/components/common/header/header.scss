@@ -1,0 +1,74 @@
+@import 'UIKit/button/button.scss';
+
+.header {
+  @mixin header-active-link($after-bg-color) {
+    position: relative;
+    padding: 0 0 6px;
+
+    &::after {
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: '';
+      background-color: $after-bg-color;
+    }
+  }
+
+  margin-bottom: 88px;
+  background-color: $light-gray;
+  @include shadow($shadow-1);
+
+  &__row {
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+    column-gap: 125px;
+  }
+
+  &__main-menu-list {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+    column-gap: 105px;
+    list-style: none;
+  }
+
+  &__main-menu-item-link {
+    font-size: 24px;
+
+    @media (hover: hover) {
+      &:hover {
+        @include header-active-link($gray-6);
+      }
+    }
+
+    &_this-page {
+      @include header-active-link($black-1);
+
+      @media (hover: hover) {
+        &:hover {
+          @include header-active-link($black-1)
+        }
+      }
+    }
+  }
+
+  &__lk-buttons {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    column-gap: 32px;
+  }
+
+  &__lk-entry-button {
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+}

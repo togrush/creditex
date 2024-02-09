@@ -1,0 +1,7 @@
+mixin annuity-calculator-block(title, footnote)
+  section.section.annuity-calculator-block
+    .container
+      .section__wrapper.annuity-calculator-block__wrapper
+        h4 #{title}
+        include Components/annuity-calculator/annuity-calculator.pug
+        span #{footnote}

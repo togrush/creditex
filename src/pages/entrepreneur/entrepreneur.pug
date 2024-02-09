@@ -1,0 +1,67 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'Entrepreneur';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'entrepreneur-page';
+
+block styles
+  link(href=require('./entrepreneur.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./entrepreneur.js') defer)
+
+block content
+  include Components/offer/offer.pug
+  include Components/card-issued-block/card-issued-block.pug
+
+  include Components/advantages/advantages.pug
+  +advantages('', {
+    title: 'Сотрудничество с нами - удобство и выгода.',
+    paragraphs: ['Сотрудничество с нами - удобство и выгода. Наши инструменты легки в использовании и настраиваются под ваши потребности. Благодаря партнерской сети, мы быстро подбираем финансовые продукты для каждого клиента.']
+  }, [
+    {
+      iconName: 'page',
+      title: 'Прозрачность',
+      paragraphs: ['Регламентированный процесс работы'],
+      bordered: true,
+    },
+    {
+      iconName: 'speed',
+      title: 'Скорость',
+      paragraphs: ['Быстрый подбор более 5* кредитных продуктов'],
+      bordered: true,
+    },
+    {
+      iconName: 'credit-card',
+      title: 'Нацеленность на клиента',
+      paragraphs: ['Индивидуальный подбор кредитных программ под Ваши задачи'],
+      bordered: true,
+    },
+  ])(class='advantages__wrapper_paddings-62-74')
+
+  include Components/how-it-work/how-it-work.pug
+  +howItWork('small')
+
+  include Components/advantages-numbers/advantages-numbers.pug
+  +advantagesNumbers('Показатели платформы', [
+    {
+      title: '800 сделок',
+      description: 'Более 800 успешных сделок',
+    },
+    {
+      title: '3 млрд',
+      description: 'Выдано более 3 млрд рублей',
+    },
+    {
+      title: '74',
+      description: 'Кредитных организаций',
+    },
+  ])(class='advantages-numbers__wrapper_biggest-paddings')
+
+  include Components/annuity-calculator-block/annuity-calculator-block.pug
+  +annuity-calculator-block('Обычный аннуитетный калькулятор *', '*При 9% годовых')
+
+  include Components/product-line-block/product-line-block.pug
+  include Components/business-requirements/business-requirements.pug

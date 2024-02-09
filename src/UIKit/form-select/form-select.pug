@@ -1,0 +1,10 @@
+mixin form-select(nameOrID, options, placeholder)
+  .form-select
+    select(id=nameOrID, name=nameOrID)&attributes(attributes)
+      if placeholder
+        option(disabled, selected, value='') #{placeholder}
+      each option in options
+        option(value=option.value) #{option.text}
+    .form-select__arrow
+    include UIKit/form-control-error/form-control-error.pug
+    +form-control-error()(class='form-select__error')

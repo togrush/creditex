@@ -1,0 +1,7 @@
+mixin user-data-slot(dataItems, description)
+  .user-data-slot&attributes(attributes)
+    .user-data-slot__data-row
+      each dataItem in dataItems
+        span.user-data-slot__data-item #{dataItem}
+    .user-data-slot__description
+      p #{description}

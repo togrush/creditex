@@ -1,0 +1,18 @@
+@import 'UIKit/button/button.scss';
+@import 'Components/user-data-slot/user-data-slot.scss';
+
+.user-data-block {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+
+  &__slots {
+    display: flex;
+    column-gap: 16px;
+  }
+
+  &__buttons {
+    display: flex;
+    column-gap: 16px;
+  }
+}

@@ -1,0 +1,56 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'Main page';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'main-page';
+
+block styles
+  link(href=require('./main.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./main.js') defer)
+
+block content
+  include Components/offer/offer.pug
+  include Components/card-issued-block/card-issued-block.pug
+  include Components/about-platform/about-platform.pug
+
+  include Components/how-it-work/how-it-work.pug
+  +howItWork('small')
+
+  include Components/advantages-numbers/advantages-numbers.pug
+  +advantagesNumbers('', [
+    {
+      title: '800 сделок',
+      description: 'Более 800 успешных сделок',
+    },
+    {
+      title: '3 млрд',
+      description: 'Выдано более 3 млрд рублей',
+    },
+    {
+      title: '74',
+      description: 'Кредитных организаций',
+    },
+  ])(class='advantages-numbers__wrapper_smaller-paddings')
+
+  include Components/advantages/advantages.pug
+  +advantages('', '', [
+    {
+      iconName: 'lock',
+      title: 'Безопасно',
+      paragraphs: ['При передаче данных в банки используются современные технологии шифрования. Все банки имеют лицензии и состоят в реестре Банка России',],
+    },
+    {
+      iconName: 'like',
+      title: 'Удобно',
+      paragraphs: ['Вы заполняете всего 1 анкету, а мы показываем вам уже одобренные предложения. Это удобнее, чем подавать заявки в разные банки самим', 'Весь процесс подачи заявки и управления кредитом доступен онлайн. Никакой бумажной волокиты.'],
+    },
+    {
+      iconName: 'zipper',
+      title: 'Быстро и понятно',
+      paragraphs: ['После регистрации на нашей платформе за Вами автоматически закрепляется персональный менеджер.', 'Мгновенные решения: Забудьте о долгих ожиданиях. Мы предлагаем мгновенные решения по вашей заявке.'],
+    },
+  ])(class='advantages__wrapper_paddings-79-100-27')

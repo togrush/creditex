@@ -1,0 +1,9 @@
+mixin form-radio(idAndName, radioItems)
+  .form-radio(id=idAndName)
+    .form-radio__items
+      each item in radioItems
+        input(type='radio', id=item.id, name=idAndName, checked=item.checked, value=item.id)&attributes(
+          attributes)
+        label(for=item.id) #{item.text}
+    include UIKit/form-control-error/form-control-error.pug
+    +form-control-error()

@@ -1,0 +1,18 @@
+.deals-pagination.deals__pagination.section__item
+  .deals-pagination__show
+    span Показывать
+    include Components/pagination-select/pagination-select.pug
+  .deals-pagination__counter
+    span(id='deals-pagination-beginning') 0
+    span -
+    span(id='deals-pagination-ending') 0
+    span &nbsp;из&nbsp;
+    span(id='deals-pagination-only') 0
+  .deals-pagination__arrows
+    a(href='#', id='deals-pagination-prew-link', class='deals-pagination__prew-arrow')
+      include Components/svg-icon/svg-icon.pug
+      +svgIcon('pagination-next')
+    a(href='#', id='deals-pagination-next-link', class='deals-pagination__next-arrow')
+      include Components/svg-icon/svg-icon.pug
+      +svgIcon('pagination-next')
+

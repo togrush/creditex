@@ -1,0 +1,97 @@
+@import 'UIKit/form-control-error/form-control-error.scss';
+
+.form-file-upload {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 12px;
+
+  &__label {
+    position: relative;
+    display: flex;
+    min-height: 207px;
+    padding: 55px;
+    border-radius: $radius-bit-less;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 140%;
+    background-color: $gray-22;
+    row-gap: 8px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $black-1;
+    row-gap: 4px;
+
+    &_empty {
+      color: $gray-23;
+    }
+
+    &_hidden {
+      display: none;
+    }
+  }
+
+
+  &__loaded-file {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  &__delete {
+    display: flex;
+    width: 18px;
+    height: 18px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg path {
+      transition: fill .3s ease-in-out;
+      fill: $gray-23;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        svg path {
+          fill: $black-1;
+        }
+      }
+    }
+  }
+
+  &__instruction-link {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 140%;
+    color: $black-1;
+  }
+
+  &__preview {
+    display: flex;
+    overflow-y: scroll;
+    width: 824px;
+    height: 506px;
+    align-items: center;
+    column-gap: 12px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__preview-item {
+    width: 824px;
+    height: 506px;
+    object-fit: contain;
+  }
+}

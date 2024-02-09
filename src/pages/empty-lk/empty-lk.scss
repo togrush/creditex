@@ -1,0 +1,11 @@
+@import 'Layouts/user-account-pages-layout/user-account-pages-layout.scss';
+
+@import 'Components/empty-lk-block/empty-lk-block.scss';
+
+.empty-lk {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

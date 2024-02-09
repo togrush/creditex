@@ -1,0 +1,75 @@
+.card-issued {
+  flex: 0 0 250px;
+  position: relative;
+
+  &__image {
+    width: 250px;
+    height: 130px;
+
+    img {
+      width: 250px;
+      height: 130px;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    padding: 16px;
+    background-color: $light-gray;
+    color: $black-1;
+
+    h4 {
+      font-size: 23px;
+      line-height: 25px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 17px;
+      color: $gray-15;
+    }
+  }
+
+  &__numbers {
+    text-transform: uppercase;
+    margin-bottom: 8px;
+
+    span {
+      &:first-child {
+        &::after {
+          content: '%';
+        }
+      }
+
+      &:nth-child(2) {
+        &::before,
+        &::after {
+          content: ' | '
+        }
+      }
+
+      &:last-child {
+        &::before {
+          content: ' ';
+          font-family: sans-serif;
+        }
+      }
+    }
+  }
+
+  &__date {
+    padding: 4px 8px;
+    border-radius: $radius-small;
+    background-color: $black-1;
+    color: $white-1;
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+
+    &::before {
+      content: 'Выдан: ';
+    }
+  }
+}

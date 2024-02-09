@@ -1,0 +1,26 @@
+- const imagePNG1x = require('Images/offer-image/offer-image-1x.png');
+- const imagePNG2x = require('Images/offer-image/offer-image-2x.png');
+- const imageWebp1x = require('Images/offer-image/offer-image-1x.webp');
+- const imageWebp2x = require('Images/offer-image/offer-image-2x.webp');
+
+section.section.offer
+  .container
+    .section__wrapper.offer__wrapper
+      .offer__left-wrapper
+        .offer__text
+          h1 Сервис привлечения финансовых продуктов для бизнеса
+          p Подберем для Вас предложение с высокой вероятность одобрения
+
+        form.offer__controls(name='offer-form', method='GET', action='./')
+          include UIKit/form-control/form-control.pug
+          +form-control('tel', 'offer-phone', 'Телефон')(class='offer__input')
+
+          include UIKit/button/button.pug
+          +button('offer-button', '', 'submit', 'primary', 'Начать')(class='offer__button', data-reg-page-path='./registration.html')
+
+      .offer__right-wrapper
+        .offer__round
+        picture.offer__image
+          source(srcset=`${imageWebp1x} 1x, ${imageWebp2x} 2x` type='image/webp')
+          source(srcset=`${imagePNG1x} 1x, ${imagePNG2x} 2x` type='image/jpg')
+          img(alt='MacBook Pro' src=require('Images/offer-image/offer-image-1x.png'))

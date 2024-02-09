@@ -1,0 +1,30 @@
+@import 'Styles/styles';
+@import 'Components/common/header/header';
+@import 'Components/common/register-oneself/register-oneself.scss';
+@import 'Components/common/footer/footer';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: $light-gray;
+}
+
+.page__main {
+  flex: 1 0 auto;
+
+  .section {
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &__wrapper {
+      border-radius: $radius;
+      overflow: hidden;
+    }
+  }
+}

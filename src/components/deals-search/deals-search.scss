@@ -1,0 +1,29 @@
+.deals-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: flex;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  &__control {
+    width: 200px;
+    padding: 4px 0 4px 36px;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    color: $black-1;
+  }
+}

@@ -1,0 +1,15 @@
+mixin user-data-block(title, slots, buttonsArray, slotParams=null)
+  section.section.user-data-block
+    .section__header.section__item.user-data-block__header
+      h5 #{title}
+    .section__item.user-data-block__slots
+      include Components/user-data-slot/user-data-slot.pug
+      each slot in slots
+        if !slotParams
+          +user-data-slot(slot.dataItems, slot.description)
+        else
+          +user-data-slot(slot.dataItems, slot.description)(class='user-data-slot_' + slotParams.modifier)
+    .section__item.user-data-block__buttons
+      include UIKit/button/button.pug
+      each button in buttonsArray
+        +button(button.id, button.href, button.type, button.visualType, button.text, button.icon)

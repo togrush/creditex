@@ -1,0 +1,31 @@
+.user-account-footer {
+  background-color: $black-5;
+  color: $white-1;
+
+  &__wrapper {
+    display: flex;
+    padding-top: 29px;
+    padding-bottom: 29px;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 24px;
+
+    span {
+      font-size: 14px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+  }
+
+  &__icon {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}

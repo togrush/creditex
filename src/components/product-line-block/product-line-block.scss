@@ -1,0 +1,17 @@
+@import 'Components/block-with-tabs/block-with-tabs.scss';
+@import 'Components/product-line-tab-content/product-line-tab-content.scss';
+
+.product-line {
+  &__wrapper {
+    display: flex;
+    padding: 97px 40px 40px;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 68px;
+
+    & > h4 {
+      text-align: center;
+      color: $gray-8;
+    }
+  }
+}

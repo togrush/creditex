@@ -1,0 +1,10 @@
+header.user-account-header
+  .container.container_user-account.user-account-header__wrapper
+    a.user-account-header__logo(href='./')
+      include Images/logo.pug
+    if (username)
+      .user-account-header__user
+        .user-account-header__image
+          include Components/svg-icon/svg-icon.pug
+          +svgIcon('user')
+        .user-account-header__name #{username}

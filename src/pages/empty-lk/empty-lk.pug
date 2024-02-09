@@ -1,0 +1,15 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Empty LK';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'empty-lk';
+
+block styles
+  link(href=require('./empty-lk.scss') rel='stylesheet')
+
+block scripts
+
+block content
+  include Components/empty-lk-block/empty-lk-block.pug

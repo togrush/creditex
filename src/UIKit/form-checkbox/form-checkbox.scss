@@ -1,0 +1,26 @@
+.form-checkbox {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  column-gap: 8px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 140%;
+  cursor: pointer;
+
+  input {
+    width: 16px;
+    height: 16px;
+    border: 1px solid $gray-14;
+    border-radius: 2px;
+    background-color: $white-1;
+    cursor: pointer;
+    appearance: none;
+
+    &:checked {
+      border-color: $black-1;
+      background: url("Icons/checkbox-check.svg") no-repeat center, $black-1;
+      background-size: 16px;
+    }
+  }
+}

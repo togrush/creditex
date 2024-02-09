@@ -1,0 +1,54 @@
+@import 'Components/pagination-select/pagination-select.scss';
+
+.deals-pagination {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-6;
+
+  &__show {
+    display: flex;
+    margin-right: 51px;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  &__counter {
+    margin-right: 27px;
+  }
+
+  &__arrows {
+    display: flex;
+    column-gap: 6px;
+
+    a {
+      display: flex;
+      width: 24px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
+
+      svg path {
+        transition: stroke .3s ease-in-out;
+      }
+
+      @media(hover: hover) {
+        &:hover {
+          svg path {
+            stroke: $black-6;
+          }
+        }
+      }
+    }
+  }
+
+  &__prew-arrow {
+    svg {
+      transform: rotate(180deg);
+    }
+
+  }
+}

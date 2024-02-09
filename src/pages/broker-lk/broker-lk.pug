@@ -1,0 +1,46 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Broker LK';
+  - let username = 'ИП Шпутненко Кирилл Сергеевич';
+  - let footer = true;
+  - let pageClassName = 'broker-lk';
+
+block styles
+  link(href=require('./broker-lk.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./broker-lk.js') defer)
+
+block content
+  .container_user-account
+    include Components/user-data-block/user-data-block.pug
+    +user-data-block(
+      'Показатели',
+      [
+        {dataItems: ['0 ₽'], description: 'Доход'},
+        {dataItems: ['5,41 %'], description: 'Конверсия по заёмщикам'},
+        {dataItems: ['4'], description: 'Отправок на оценку за 30 дней'},
+        {dataItems: ['2'], description: 'Займов получено'},
+        {
+          dataItems: ['40,00 %', '3,00 %'],
+          description: 'Комиссия за выдачу в текущем квартале'
+        },
+      ],
+      [
+        {
+          id: 'submit-application-button',
+          href: './add-bid-step-1.html',
+          type: '',
+          visualType: 'primary',
+          text: 'Завести заявку',
+        },
+        {
+          id: 'referral-link-copy-button',
+          href: '',
+          type: 'button',
+          visualType: 'primary',
+          text: 'Реферальная ссылка',
+        },
+      ])
+    include Components/deals/deals.pug

@@ -1,0 +1,12 @@
+footer.user-account-footer
+  .container.container_user-account.user-account-footer__wrapper
+    a.user-account-footer__phone-link.user-account-footer__link(href='tel:+78463350505')
+      .user-account-footer__phone-icon.user-account-footer__icon
+        include Components/svg-icon/svg-icon.pug
+        +svgIcon('phone-user-footer')
+      span.user-account-footer__phone-number 8 (846) 335-05-05
+    a.user-account-footer__email-link.user-account-footer__link(href='mailto:some@gmail.com')
+      .user-account-footer__email-icon.user-account-footer__icon
+        include Components/svg-icon/svg-icon.pug
+        +svgIcon('email')
+      span.user-account-footer__email some@gmail.com

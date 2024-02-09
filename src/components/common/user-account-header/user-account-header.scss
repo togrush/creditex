@@ -1,0 +1,41 @@
+.user-account-header {
+  padding-top: 16px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    overflow: hidden;
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__image {
+    display: flex;
+    overflow: hidden;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-1;
+  }
+
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    color: $black-1;
+  }
+}

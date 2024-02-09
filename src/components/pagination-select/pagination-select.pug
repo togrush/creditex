@@ -1,0 +1,9 @@
+.pagination-select
+  select(onchange='window.location.href = this.options[this.selectedIndex].value', id='deals-pagination-select')
+    option(value='#') 10
+    option(value='#') 20
+    option(value='#') 50
+    option(value='#') 100
+  .pagination-select__arrow
+    include Components/svg-icon/svg-icon.pug
+    +svgIcon('pagination-select-arrow')

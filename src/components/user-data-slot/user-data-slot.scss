@@ -1,0 +1,38 @@
+.user-data-slot {
+  display: flex;
+  padding: 23px 30px;
+  border: 1px solid $gray-12;
+  border-radius: $radius-bit-less;
+  flex: 0 100%;
+  flex-direction: column;
+  row-gap: 5px;
+
+  &__data-row {
+    width: fit-content;
+
+    & > span {
+      width: fit-content;
+      font-size: 30px;
+      font-weight: 400;
+      color: $black-1;
+
+      &:not(:first-child) {
+        &:before {
+          content: ' | '
+        }
+      }
+    }
+  }
+
+  &__description {
+    font-size: 15px;
+    font-weight: 400;
+    color: $gray-13;
+  }
+
+  &_personal-data {
+    flex: 0 1 fit-content;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}

@@ -1,0 +1,25 @@
+.will-be-available-card {
+  display: flex;
+  padding: 24px 40px;
+  border: 1px solid $gray-4;
+  border-radius: $radius-bit-less;
+  flex: 0 0 475px;
+  align-items: center;
+  column-gap: 16px;
+  background-color: $white-1;
+
+  &__icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: $yellow-green-2;
+  }
+
+  & > span {
+    font-size: 30px;
+    color: $black-1;
+  }
+}

@@ -1,0 +1,21 @@
+@import 'Components/tab/tab.scss';
+
+.block-with-tabs {
+  width: 100%;
+
+  &__tabs-inner {
+    $inner-horizontal-indent: 50px;
+    display: flex;
+    width: calc(100% - ($inner-horizontal-indent * 2));
+    margin-right: 50px;
+    margin-left: 50px;
+    justify-content: space-between;
+  }
+
+  &__tab-content-inner {
+    padding: 105px 50px 61px;
+    border-radius: $radius-medium;
+    margin-top: -44px;
+    background-color: $white-1;
+  }
+}

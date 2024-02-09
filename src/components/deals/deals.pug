@@ -1,0 +1,44 @@
+section.section.deals
+  .section__header.section__item.deals__header
+    .deals__header-left-side
+      h5 Сделки по заемщикам
+      .deals__filter
+        include UIKit/button/button.pug
+        +button('approved-filter-link', '#', '', 'filter', 'Одобренные')
+        +button('active-filter-link', '#', '', 'filter-selected', 'Активные')
+        +button('rejected-filter-link', '#', '', 'filter', 'Отклоненные')
+    include Components/deals-search/deals-search.pug
+  .deals__table
+    .deals__table-row.deals__table-row_main
+      .deals__table-col.deals__table-col_number
+        +button('number-sort-button', '#', '', 'sort', 'Номер заявки', 'sort-arrow')
+      .deals__table-col.deals__table-col_client
+        +button('client-sort-button', '#', '', 'sort', 'Клиент', 'sort-arrow')
+      .deals__table-col.deals__table-col_inn
+        +button('inn-sort-button', '#', '', 'sort', 'ИНН', 'sort-arrow')(class='button_sort-reverse')
+      .deals__table-col.deals__table-col_date
+        +button('date-sort-button', '#', '', 'sort', 'Дата заявки', 'sort-arrow')
+      .deals__table-col.deals__table-col_exemption
+        span Льготное финансирование
+      .deals__table-col.deals__table-col_format
+        span Формат регистрации
+      .deals__table-col.deals__table-col_status
+        +button('status-sort-button', '#', '', 'sort', 'Статус', 'sort-arrow')
+    each status in [{text: 'Одобрено', modifier: 'green'}, {text: 'Активная', modifier: 'blue'}, {text: 'Отклонённая', modifier: 'red'}, {text: 'Отклонённая', modifier: 'red'}]
+      .deals__table-row
+        .deals__table-col.deals__table-col_number
+          span Тестовые данные
+        .deals__table-col.deals__table-col_client
+          span Тестовые данные
+        .deals__table-col.deals__table-col_inn
+          span Тестовые данные
+        .deals__table-col.deals__table-col_date
+          span Тестовые данные
+        .deals__table-col.deals__table-col_exemption
+          span Тестовые данные
+        .deals__table-col.deals__table-col_format
+          span Тестовые данные
+        .deals__table-col.deals__table-col_status
+          include UIKit/deal-status/deal-status.pug
+          +deal-status(status.text, status.modifier)
+  include Components/deals-pagination/deals-pagination.pug

@@ -1,0 +1,15 @@
+.register-oneself {
+  &__wrapper {
+    display: flex;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    align-items: center;
+    justify-content: center;
+    background-color: $olive-gray;
+  }
+
+  &__button {
+    min-width: 403px;
+    text-align: center;
+  }
+}

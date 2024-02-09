@@ -1,0 +1,8 @@
+mixin form-steps(steps)
+  .form-steps
+    each step, index in steps
+      include Components/form-step/form-step.pug
+      if index === 0
+        +form-step(step, index + 1)(class='form-step_active')
+      else
+        +form-step(step, index + 1)

@@ -1,0 +1,16 @@
+extends Layouts/user-account-pages-layout/user-account-pages-layout.pug
+
+block variables
+  - let title = 'Authorization';
+  - let username = false;
+  - let footer = false;
+  - let pageClassName = 'authorization';
+
+block styles
+  link(href=require('./authorization.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./authorization.js') defer)
+
+block content
+  include Components/authorization-form/authorization-form.pug

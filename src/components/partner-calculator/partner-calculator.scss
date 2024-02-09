@@ -1,0 +1,81 @@
+.partner-calculator {
+  &__wrapper {
+    display: flex;
+    padding: 89px 88px 87px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $white-1;
+
+    & > h4 {
+      margin-bottom: 52px;
+      text-align: center;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 150px;
+  }
+
+  &__data {
+    display: flex;
+    flex: 0 0 651px;
+    flex-direction: column;
+    row-gap: 41px;
+  }
+
+  &__action {
+    display: flex;
+    width: 100%;
+    max-width: 651px;
+    margin-top: 21px;
+    justify-content: space-between;
+    column-gap: 8px;
+
+    .form-control {
+      position: relative;
+      flex: 0 0 527px;
+
+      &__error {
+        position: absolute;
+        top: 58px;
+        left: 0;
+      }
+    }
+  }
+
+  &__action-button {
+    margin-top: 1px;
+  }
+
+  &__result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+
+    span {
+      line-height: 20px;
+      white-space: nowrap;
+      color: $black-1;
+    }
+
+    span:first-child {
+      font-size: 15px;
+      font-weight: 300;
+
+    }
+
+    span:last-child {
+      font-size: 25px;
+
+      &::after {
+        content: ' ₽'
+      }
+    }
+  }
+}

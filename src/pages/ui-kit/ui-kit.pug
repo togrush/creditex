@@ -1,0 +1,71 @@
+extends Layouts/ui-kit-layout/ui-kit-layout.pug
+
+block variables
+  - let title = 'UI-kit';
+  - let pageClassName = 'ui-kit';
+
+block styles
+  link(href=require('./ui-kit.scss') rel='stylesheet')
+block scripts
+  script(src=require('./ui-kit.js') defer)
+
+block content
+
+  .container
+    h1 UI-kit
+
+    h2 Button
+    .ui-kit__component-container.ui-kit__component-container_gorizontal
+      include UIKit/button/button.pug
+      +button('test-button-primary', '', 'button', 'primary', 'Primary')
+      +button('test-button-secondary', '', 'button', 'secondary', 'Secondary')
+      +button('test-button-tertiary', '', 'button', 'tertiary', 'Tertiary')
+      +button('test-button-primary-disabled', '', 'button', 'primary', 'Disabled Primary')(disabled)
+      +button('test-button-secondary-disabled', '', 'button', 'secondary', 'Disabled Secondary')(disabled)
+      +button('test-button-transparent', '', 'button', 'transparent', 'Transparent Button')
+      +button('test-button-transparent-disabled', '', 'button', 'transparent', 'Disabled Transparent Button')(disabled)
+      +button('test-button-link', '#', '', 'link', 'Looks like a link')
+
+    h2 Input
+    include UIKit/form-control/form-control.pug
+    +form-control('tel', 'test-input-name', 'Телефон')
+
+    h2 Input-range
+    include UIKit/form-range/form-range.pug
+    +form-range('example-range', 'Желаемая сумма', 500000, 27000000, {
+      one: 'рубль',
+      two: 'рубля',
+      five: 'рублей'
+    }, 3000000)
+
+    h2 Legend color
+    include UIKit/legend-item/legend-item.pug
+    +legend-item('Основной долг', '12141d')
+    +legend-item('Проценты', 'e5e5e5')
+
+    h2 Checkbox
+    include UIKit/form-checkbox/form-checkbox.pug
+    +form-checkbox('example-checkbox', 'Test checkbox')
+
+    h2 Select
+    include UIKit/form-select/form-select.pug
+    +form-select('example-select', [
+      {text: 'option 1', value: '1'},
+      {text: 'option 2', value: '2'},
+      {text: 'option 3', value: '3'},
+    ], 'Choose some...')
+
+    h2 Deals status
+    .ui-kit__component-container.ui-kit__component-container_gorizontal
+      include UIKit/deal-status/deal-status.pug
+      +deal-status('Одобрено', 'green')
+      +deal-status('Активная', 'blue')
+      +deal-status('Отклонённая', 'red')
+
+    h2 Radio
+    include UIKit/form-radio/form-radio.pug
+    +form-radio('test-radio', [
+      {id: 'first', checked: false, text: 'First'},
+      {id: 'second', checked: true, text: 'Second'},
+      {id: 'third', checked: false, text: 'Third'},
+    ])

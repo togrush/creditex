@@ -1,0 +1,45 @@
+.partners-advantage {
+  &__wrapper {
+    display: flex;
+    max-height: 596px;
+    padding: 134px 119px;
+    justify-content: space-between;
+
+    &_white {
+      background-color: $white-1;
+    }
+
+    &_gray {
+      background-color: $gray-4;
+    }
+  }
+
+  &__image {
+    display: flex;
+    flex: 0 0 444px;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: auto;
+      height: 429px;
+      object-fit: cover;
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    flex: 0 0 713px;
+    flex-direction: column;
+    row-gap: 24px;
+
+    & > h3 {
+      color: $black-3;
+    }
+
+    & > p {
+      font-size: 30px;
+      color: $gray-2;
+    }
+  }
+}

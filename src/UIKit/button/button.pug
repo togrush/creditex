@@ -1,0 +1,14 @@
+mixin button(buttonID, href, buttonType, visualType, buttonText, iconName='')
+  if href
+    a.button(
+      class='button_' + visualType,
+      id=buttonID,
+      href=href)&attributes(attributes) #{buttonText}
+      if iconName
+        include Components/svg-icon/svg-icon.pug
+        +svgIcon(iconName)
+  else
+    button.button(
+      class='button_' + visualType,
+      type=buttonType,
+      id=buttonID)&attributes(attributes) #{buttonText}

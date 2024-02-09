@@ -1,0 +1,10 @@
+@import 'Layouts/user-account-pages-layout/user-account-pages-layout.scss';
+
+@import 'Components/registration-form/registration-form.scss';
+
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

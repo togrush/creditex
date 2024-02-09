@@ -1,0 +1,38 @@
+.form-select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 4px;
+
+  &__arrow {
+    position: absolute;
+    top: 18px;
+    right: 26px;
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background: url("Icons/select-arrow.svg") no-repeat center;
+    background-size: 18px;
+    content: '';
+    transition: transform .1s ease-in-out;
+    pointer-events: none;
+
+    &_rotate {
+      transform: rotate(180deg);
+    }
+  }
+
+  select {
+    width: 100%;
+    padding: 16px 26px;
+    outline: none;
+    border: 1px solid $gray-11;
+    border-radius: $radius-small;
+    font-size: 14px;
+    line-height: 20px;
+    background-color: $white-1;
+    color: $gray-1;
+    appearance: none;
+  }
+}

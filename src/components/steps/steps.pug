@@ -1,0 +1,10 @@
+mixin steps(blockTitle, stepsTextsArray)
+  section.section.steps
+    .container
+      .section__wrapper.steps__wrapper
+        h4 #{blockTitle}
+        .steps__inner
+          each step, index in stepsTextsArray
+            .steps__item
+              p.steps__step-round #{index + 1}
+              p.steps__text #{step}
