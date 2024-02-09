@@ -5,11 +5,21 @@
     padding: 134px 119px 145px;
     column-gap: 104px;
     background-color: $white-1;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 24px 24px;
+      flex-direction: column;
+      row-gap: 24px;
+    }
   }
 
   p {
     font-size: 24px;
     font-weight: 500;
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+    }
   }
 
   &__text {
@@ -18,13 +28,29 @@
     max-width: 749px;
     flex-direction: column;
     row-gap: 45px;
+    @media (max-width: $layout-breakpoint-small) {
+      row-gap: 16px;
+      width: auto;
+    }
 
     & > h2 {
       color: $black-3;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+
+      }
     }
 
     & > p {
       color: $gray-2;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+
+      }
     }
   }
 
@@ -37,6 +63,11 @@
     flex: 0 0 376px;
     flex-direction: column;
     row-gap: 16px;
+
+    @media (max-width: $layout-breakpoint-small) {
+      flex: auto;
+      padding: 16px 24px;
+    }
 
     & > p {
       color: $black-1;
@@ -66,5 +97,8 @@
     height: 666px;
     border-radius: 50%;
     background-color: $yellow-green-1;
+    @media (max-width: $layout-breakpoint-small) {
+      display: none;
+    }
   }
 }

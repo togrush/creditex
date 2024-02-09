@@ -5,11 +5,11 @@ mixin howItWork(svgImage='')
         h2 Как это работает?
 
         if svgImage === 'small'
-          .how-it-work__scheme-row
+          .how-it-work__scheme-row_1
             include Images/how-it-work/how-it-work-scheme--top-row.pug
-          .how-it-work__scheme-row
+          .how-it-work__scheme-row_2
             include Images/how-it-work/how-it-work-scheme--bottom-row.pug
 
         if svgImage === 'big'
-          .how-it-work__scheme-row
+          .how-it-work__scheme-row_3
             include Images/how-it-work/how-it-work-scheme--big.pug

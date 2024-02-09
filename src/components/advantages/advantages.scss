@@ -11,14 +11,29 @@
 
     &_paddings-79-100-27 {
       padding: 79px 100px 27px;
+      @media (max-width: $layout-breakpoint-small) {
+        padding: 24px 16px;
+      }
     }
 
     &_paddings-62-74 {
       padding: 62px 74px;
+      @media (max-width: $layout-breakpoint-small) {
+        padding: 24px 16px;
+      }
     }
 
     &_paddings-74-145 {
       padding: 74px 145px;
+      @media (max-width: $layout-breakpoint-small) {
+        padding: 24px 16px;
+        h4 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
     }
   }
 
@@ -32,6 +47,10 @@
   &__body {
     display: flex;
     column-gap: 51px;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      row-gap: 32px;
+    }
   }
 
   &__left-column {
@@ -42,6 +61,20 @@
 
     @media (max-width: 1680px) {
       flex-basis: 400px;
+    }
+    @media (max-width: $layout-breakpoint-small) {
+      flex-basis: auto;
+      h4 {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+      }
+      p {
+        color: $gray-2;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+      }
     }
   }
 
@@ -55,5 +88,9 @@
     display: flex;
     justify-content: space-between;
     column-gap: 24px;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      row-gap: 24px;
+    }
   }
 }

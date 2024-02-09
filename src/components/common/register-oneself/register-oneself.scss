@@ -11,5 +11,8 @@
   &__button {
     min-width: 403px;
     text-align: center;
+    @media (max-width: $layout-breakpoint-small) {
+      min-width: auto;
+    }
   }
 }

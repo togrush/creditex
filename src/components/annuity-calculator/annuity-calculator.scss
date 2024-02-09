@@ -52,3 +52,17 @@
     row-gap: 12px;
   }
 }
+
+.calculator__wrapper {
+  @media (max-width: $layout-breakpoint-small) {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 40px;
+    .calculator__controls {
+      flex: auto;
+    }
+    .calculator__graph {
+      height: 150px;
+    }
+  }
+}

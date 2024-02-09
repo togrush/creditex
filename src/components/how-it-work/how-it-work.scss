@@ -8,8 +8,54 @@
     row-gap: 78px;
     padding: 79px 54px 150px;
 
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 40px 16px;
+      row-gap: 24px;
+    }
+
     h2 {
       color: $white-1;
+      h2 {
+        @media (max-width: $layout-breakpoint-small) {
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+    }
+  }
+  &__scheme-row {
+    @media (max-width: $layout-breakpoint-small) {
+      &_1 {
+        svg {
+          display: none;
+        }
+        content: "";
+        width: 264px;
+        height: 182px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./mobile-how-it-work-scheme--top.svg');
+      }
+      &_2 {
+        //svg {
+        //  display: none;
+        //}
+        // то же самое что и с &_1 дождавшить целой svg TODO
+      }
+      &_3 {
+        svg {
+          display: none;
+        }
+        content: "";
+        width: 264px;
+        height: 712px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./mobile-how-it-work-scheme--big.svg');
+      }
     }
   }
 }

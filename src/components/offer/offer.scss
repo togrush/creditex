@@ -1,5 +1,9 @@
 .offer {
   margin-bottom: 0;
+  @media (max-width: $layout-breakpoint-small) {
+    background-color: $light-gray;
+    padding: 12px 0;
+  }
 
   &__wrapper {
     display: flex;
@@ -10,6 +14,9 @@
     justify-content: space-between;
     column-gap: 60px;
     background-color: $olive-gray;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 62px 21px 16px 26px;
+    }
   }
 
   &__left-wrapper {
@@ -17,27 +24,47 @@
     flex: 0 1 815px;
     flex-direction: column;
     row-gap: 53px;
+    @media (max-width: $layout-breakpoint-small) {
+      width: 100%;
+      row-gap: 32px;
+    }
   }
 
   &__right-wrapper {
     position: relative;
     z-index: 1;
     flex: 0 1 774px;
+    @media (max-width: $layout-breakpoint-small) {
+      display: none;
+    }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     row-gap: 32px;
+    @media (max-width: $layout-breakpoint-small) {
+     row-gap: 16px;
+    }
 
     h1 {
       color: $black-1;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 39px;
+      }
     }
 
     p {
       font-size: 20px;
       line-height: 27px;
       color: $gray-1;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+      }
     }
   }
 
@@ -46,14 +73,24 @@
     max-width: 563px;
     flex-direction: row;
     justify-content: space-between;
+    @media (max-width: $layout-breakpoint-small) {
+     flex-direction: column;
+      row-gap: 135px;
+    }
   }
 
   &__button {
     margin-top: 1px;
+    @media (max-width: $layout-breakpoint-small) {
+      width: auto;
+    }
   }
 
   &__input {
     width: 459px;
+    @media (max-width: $layout-breakpoint-small) {
+      width: auto;
+    }
   }
 
   &__round {
