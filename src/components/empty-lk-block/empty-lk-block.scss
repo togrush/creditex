@@ -7,6 +7,10 @@
   align-items: center;
   row-gap: 24px;
 
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 0 20px;
+  }
+
   &__header {
     display: flex;
     flex-direction: column;
@@ -16,11 +20,27 @@
 
     & > h4 {
       text-align: center;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+      }
     }
 
     & > p {
       font-size: 24px;
       font-weight: 500;
+      text-align: center;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+      }
+    }
+  }
+  @media (max-width: $layout-breakpoint-small) {
+    .button {
+      width: 100%;
       text-align: center;
     }
   }

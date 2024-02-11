@@ -11,6 +11,20 @@
     margin-left: 77px;
     flex-direction: column;
     row-gap: 16px;
+    @media (max-width: $layout-breakpoint-small) {
+      margin: 0;
+      h4 {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 22px;
+      }
+      & > p {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+      }
+
+    }
 
     & > p {
       font-size: 24px;
@@ -22,5 +36,9 @@
   &__cards {
     display: flex;
     column-gap: 16px;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      row-gap: 12px;
+    }
   }
 }

@@ -18,6 +18,10 @@
     border-bottom-right-radius: $radius-bit-less;
     margin-bottom: 60px;
     background-color: $white-1;
+    @media (max-width: $layout-breakpoint-small) {
+      background-color: transparent;
+      padding: 32px 16px;
+    }
 
     &_step-1 {
       .new-application__controls-group {
@@ -80,6 +84,9 @@
     align-items: center;
     justify-content: center;
     row-gap: 24px;
+    @media (max-width: $layout-breakpoint-small) {
+      align-items: start;
+    }
 
     &_custom {
       max-width: unset !important;
@@ -106,6 +113,12 @@
     & > * {
       width: calc((100% - 16px) / 2);
     }
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      & > * {
+        width: 100%
+      }
+    }
   }
 
   &__form-block-title {
@@ -119,6 +132,18 @@
     & > p {
       color: $black-1;
     }
+    @media (max-width: $layout-breakpoint-small) {
+      h5 {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 15px;
+      }
+    }
   }
 
   &__buttons-group {
@@ -127,5 +152,22 @@
     align-items: center;
     justify-content: center;
     column-gap: 8px;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      row-gap: 8px;
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+    .button {
+      width: 100%;
+      text-align: center;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 18px;
+    }
+    .button_transparent {
+      background-color: $white-1;
+    }
   }
 }

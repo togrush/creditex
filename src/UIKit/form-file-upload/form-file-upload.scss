@@ -6,6 +6,10 @@
   flex-direction: column;
   row-gap: 12px;
 
+  @media (max-width: $layout-breakpoint-small) {
+    align-items: center;
+  }
+
   &__label {
     position: relative;
     display: flex;

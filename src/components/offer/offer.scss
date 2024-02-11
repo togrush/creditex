@@ -1,3 +1,5 @@
+@import 'Components/common/mobile-header-navigate/mobile-header-navigate.scss';
+
 .offer {
   margin-bottom: 0;
   @media (max-width: $layout-breakpoint-small) {
@@ -15,7 +17,7 @@
     column-gap: 60px;
     background-color: $olive-gray;
     @media (max-width: $layout-breakpoint-small) {
-      padding: 62px 21px 16px 26px;
+      padding: 18px 21px 16px 26px;
     }
   }
 
@@ -24,9 +26,15 @@
     flex: 0 1 815px;
     flex-direction: column;
     row-gap: 53px;
+    .offer__navigate {
+      display: none;
+    }
     @media (max-width: $layout-breakpoint-small) {
       width: 100%;
       row-gap: 32px;
+      .offer__navigate {
+        display: flex;
+      }
     }
   }
 

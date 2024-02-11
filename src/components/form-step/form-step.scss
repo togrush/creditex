@@ -4,7 +4,9 @@
   column-gap: 16px;
   font-size: 21px;
   font-weight: 400;
-
+  @media (max-width: $layout-breakpoint-small) {
+    display: none;
+  }
   &__text {
     color: $black-1;
   }
@@ -22,6 +24,9 @@
   }
 
   &_active {
+    @media (max-width: $layout-breakpoint-small) {
+      display: flex;
+    }
     .form-step__number {
       border-color: $orange;
       background-color: $orange;

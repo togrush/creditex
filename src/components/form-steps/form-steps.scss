@@ -10,4 +10,18 @@
   justify-content: center;
   column-gap: 80px;
   background-color: $white-1;
+  @media (max-width: $layout-breakpoint-small) {
+    background-color: transparent;
+    border-bottom: none;
+    span {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 19px;
+      &:first-child {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+      }
+    }
+  }
 }

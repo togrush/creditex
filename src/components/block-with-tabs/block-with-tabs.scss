@@ -10,6 +10,21 @@
     margin-right: 50px;
     margin-left: 50px;
     justify-content: space-between;
+    @media (max-width: $layout-breakpoint-small) {
+      width: 100%;
+      margin: 0;
+      padding: 8px;
+
+      // карусель
+      column-gap: 12px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      div {
+        scroll-snap-align: start;
+      }
+    }
   }
 
   &__tab-content-inner {
@@ -17,5 +32,9 @@
     border-radius: $radius-medium;
     margin-top: -44px;
     background-color: $white-1;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 20px 0 0;
+      margin: 0;
+    }
   }
 }

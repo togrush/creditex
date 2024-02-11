@@ -14,3 +14,32 @@
 @import 'Components/partner-calculator/partner-calculator.scss';
 @import 'Components/ways-of-working/ways-of-working.scss';
 @import 'Components/will-be-available-block/will-be-available-block.scss';
+
+@media (max-width: $layout-breakpoint-small) {
+  .wrapper-partners-advantage {
+    .section:nth-child(2) {
+      .container .partners-advantage__wrapper {
+          height: 520px;
+          .partners-advantage__text-content {
+            position: absolute;
+            top: 24px;
+          }
+          .partners-advantage__image {
+            position: absolute;
+            bottom: 0px;
+            right: 10%;
+            height: 246px;
+            width: 264px;
+          }
+      }
+    }
+
+    .section:nth-child(3) {
+      .container .partners-advantage__wrapper {
+        img {
+          left: -10%;
+        }
+      }
+    }
+  }
+}

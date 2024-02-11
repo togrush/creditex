@@ -1,5 +1,8 @@
 .user-account-header {
   padding-top: 16px;
+  @media (max-width: $layout-breakpoint-small) {
+    padding-top: 8px;
+  }
 
   &__wrapper {
     display: flex;
@@ -14,12 +17,27 @@
     height: 50px;
     align-items: center;
     justify-content: center;
+    @media (max-width: $layout-breakpoint-small) {
+      height: 28px;
+      width: 28px;
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('./mobile-logo.svg');
+      svg {
+        display: none;
+      }
+    }
   }
 
   &__user {
     display: flex;
     align-items: center;
     column-gap: 8px;
+    @media (max-width: $layout-breakpoint-small) {
+      width: 141px;
+    }
   }
 
   &__image {
@@ -31,11 +49,20 @@
     align-items: center;
     justify-content: center;
     background-color: $white-1;
+    @media (max-width: $layout-breakpoint-small) {
+      min-width: 24px;
+      height: auto;
+    }
   }
 
   &__name {
     font-size: 16px;
     font-weight: 500;
     color: $black-1;
+    @media (max-width: $layout-breakpoint-small) {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 15px;
+    }
   }
 }

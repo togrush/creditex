@@ -7,6 +7,10 @@
   flex-direction: column;
   background-color: $gray-3;
   row-gap: 16px;
+  @media (max-width: $layout-breakpoint-small) {
+    flex: auto;
+    padding: 16px 24px;
+  }
 
   &__icon {
     display: flex;
@@ -17,6 +21,13 @@
     align-items: center;
     justify-content: center;
     background-color: $yellow-green-2;
+    @media (max-width: $layout-breakpoint-small) {
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 28px;
+      }
+    }
   }
 
   &__text-content {
@@ -27,11 +38,21 @@
     & > span {
       font-size: 30px;
       color: $gray-18;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 22px;
+      }
     }
 
     & > p {
       font-size: 15px;
       color: $gray-19;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+      }
     }
   }
 }

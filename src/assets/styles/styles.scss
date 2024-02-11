@@ -14,12 +14,15 @@ html {
   width: 100%;
   padding: 0 70px;
   margin: 0 auto;
-  @media (min-width: $layout-breakpoint-small) {
+  @media (max-width: $layout-breakpoint-small) {
     padding: 0 16px;
   }
 
   &_user-account {
     padding: 0 24px;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 0 12px;
+    }
   }
 }
 

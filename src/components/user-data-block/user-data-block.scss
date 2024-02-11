@@ -9,10 +9,28 @@
   &__slots {
     display: flex;
     column-gap: 16px;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      row-gap: 8px;
+    }
+  }
+
+  @media (max-width: $layout-breakpoint-small) {
+    &__header h5 {
+      font-size: 20px;
+    }
   }
 
   &__buttons {
     display: flex;
     column-gap: 16px;
+    @media (max-width: $layout-breakpoint-small) {
+      flex-direction: column;
+      row-gap: 8px;
+      .button {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 }

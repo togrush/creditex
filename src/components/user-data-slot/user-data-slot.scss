@@ -6,6 +6,9 @@
   flex: 0 100%;
   flex-direction: column;
   row-gap: 5px;
+  @media (max-width: $layout-breakpoint-small) {
+    padding: 16px;
+  }
 
   &__data-row {
     width: fit-content;
@@ -15,6 +18,9 @@
       font-size: 30px;
       font-weight: 400;
       color: $black-1;
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 18px;
+      }
 
       &:not(:first-child) {
         &:before {

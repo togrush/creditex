@@ -50,7 +50,7 @@ h5,
 
 h2 {
   // Mobile/H2 mobile;
-  @media (min-width: $layout-breakpoint-small) {
+  @media (max-width: $layout-breakpoint-small) {
     font-weight: 500;
     font-size: 24px;
     line-height: 29.5px;

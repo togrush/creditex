@@ -1,0 +1,26 @@
+script(src=require('./mobile-header-navigate') defer)
+.mobile-header
+  .mobile-header__logo
+    include Components/common/mobile-header-navigate/mobile-logo.svg
+  .mobile-header__menu-icon
+    include Components/common/mobile-header-navigate/mobile-menu.svg
+  .mobile-header__menu
+    nav.header__main-menu
+      ul.header__main-menu-list
+        include Components/common/header/_main-menu-item.pug
+        +main-manu-item({
+          text: 'Главная',
+          href: './',
+        }, 'header', '')(class = 'mobile-header__main-menu-item-link')
+        +main-manu-item({
+          text: 'Предпринимателям',
+          href: './entrepreneur.html'
+        }, 'header', 'entrepreneur')(class = 'mobile-header__main-menu-item-link')
+        +main-manu-item({
+          text: 'Партнерам',
+          href: './partners.html'
+        }, 'header', 'partners')(class = 'mobile-header__main-menu-item-link')
+    .header__lk-buttons
+      include UIKit/button/button.pug
+      +button('header-lk-entry', './authorization.html', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')
+      +button('lets-start', './registration.html', 'link', 'primary', 'Начать')(class='header__lets-start-button')

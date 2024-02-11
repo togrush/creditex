@@ -1,6 +1,9 @@
 @import 'UIKit/button/button.scss';
 
 .header {
+  @media (max-width: $layout-breakpoint-small) {
+    display: none;
+  }
   @mixin header-active-link($after-bg-color) {
     position: relative;
     padding: 0 0 6px;

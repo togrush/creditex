@@ -14,6 +14,15 @@ div.tab {
   background-color: $tab-bg-color;
   color: $tab-text-color;
   cursor: pointer;
+  @media (max-width: $layout-breakpoint-small) {
+    flex: auto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    text-wrap: nowrap;
+    border-radius: 8px;
+    border: 1px solid $gray-6;
+  }
 
 
   &:first-child {
@@ -35,6 +44,11 @@ div.tab {
       background-color: $tab-separator-color;
       content: '';
       transform: translateY(-50%);
+    }
+    @media (max-width: $layout-breakpoint-small) {
+      &::after {
+        display: none;
+      }
     }
   }
 

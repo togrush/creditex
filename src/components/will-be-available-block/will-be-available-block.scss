@@ -7,10 +7,21 @@
     align-items: center;
     justify-content: space-between;
     background-color: $white-1;
+    @media (max-width: $layout-breakpoint-small) {
+      padding: 24px 16px;
+      flex-direction: column;
+      row-gap: 32px;
+    }
 
     & > h3 {
       flex: 0 0 581px;
       color: $black-1;
+      @media (max-width: $layout-breakpoint-small) {
+        flex: auto;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+      }
     }
   }
 
@@ -20,5 +31,8 @@
     justify-content: flex-end;
     column-gap: 35px;
     row-gap: 20px;
+    @media (max-width: $layout-breakpoint-small) {
+      row-gap: 16px;
+    }
   }
 }
