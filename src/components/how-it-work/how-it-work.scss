@@ -39,10 +39,16 @@
         background-image: url('./mobile-how-it-work-scheme--top.svg');
       }
       &_2 {
-        //svg {
-        //  display: none;
-        //}
-        // то же самое что и с &_1 дождавшить целой svg TODO
+        svg {
+          display: none;
+        }
+        content: "";
+        width: 264px;
+        height: 403px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('./mobile-how-it-work-scheme--bottom-row.svg');
       }
       &_3 {
         svg {
