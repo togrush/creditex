@@ -1,15 +1,17 @@
-mixin howItWork(svgImage='')
-  section.section.how-it-work
-    .container
-      .section__wrapper.how-it-work__wrapper
-        h2 Как это работает?
+mixin work-steps(stepsList, title)
+  .container
+    .section-wrapper
+      if title
+        h2.section-title= title
+      .content-wrapper
+        .steps-form-container
+          .steps-container
+            each step, index in stepsList
+              .step-box(class=step.colorClass)
+                span.step-number=index + 1
+                .step-content
+                  h3.step-title= step.title
+                  p.step-description= step.description
 
-        if svgImage === 'small'
-          .how-it-work__scheme-row_1
-            include Images/how-it-work/how-it-work-scheme--top-row.pug
-          .how-it-work__scheme-row_2
-            include Images/how-it-work/how-it-work-scheme--bottom-row.pug
+          include Components/create-request/create-request.pug
 
-        if svgImage === 'big'
-          .how-it-work__scheme-row_3
-            include Images/how-it-work/how-it-work-scheme--big.pug

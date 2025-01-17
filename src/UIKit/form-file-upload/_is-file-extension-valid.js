@@ -1,5 +1,5 @@
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 
 export function isFileExtensionValid(file, control) {
   if (

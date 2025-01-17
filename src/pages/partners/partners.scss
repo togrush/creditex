@@ -1,19 +1,9 @@
 @import 'Layouts/public-pages-layout/public-pages-layout.scss';
-
 @import 'UIKit/form-control/form-control.scss';
 @import 'UIKit/form-control-error/form-control-error.scss';
 @import 'UIKit/form-range/form-range.scss';
-
 @import 'Components/offer/offer.scss';
-@import 'Components/card-issued-block/card-issued-block.scss';
-@import 'Components/advantages/advantages.scss';
 @import 'Components/how-it-work/how-it-work.scss';
-@import 'Components/advantages-numbers/advantages-numbers.scss';
-@import 'Components/partners-advantage/partners-advantage.scss';
-@import 'Components/steps/steps.scss';
-@import 'Components/partner-calculator/partner-calculator.scss';
-@import 'Components/ways-of-working/ways-of-working.scss';
-@import 'Components/will-be-available-block/will-be-available-block.scss';
 
 @media (max-width: $layout-breakpoint-small) {
   .wrapper-partners-advantage {

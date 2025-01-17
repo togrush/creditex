@@ -1,9 +1,9 @@
 import { addPhoneMask } from 'Utils/masks/phone-mask';
-import { RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS } from 'Constants/constants';
+import { RESTORE_PASSWORD_REQUEST_PAGE_CONSTANTS } from 'Components/start-work/constants/constants';
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { restorePasswordRequestHandler } from 'Components/restore-password-request-form/_restore-password-request-handler';
 

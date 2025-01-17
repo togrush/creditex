@@ -1,9 +1,9 @@
 import {
   COMMON_CONSTANTS,
   RECOVERY_PASSWORD_PAGE_CONSTANTS,
-} from 'Constants/constants';
+} from 'Components/start-work/constants/constants';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { passwordValidation } from 'Utils/validation/password-validation';
 
 export function recoveryPasswordValidation(controls) {

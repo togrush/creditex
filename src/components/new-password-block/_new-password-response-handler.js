@@ -1,6 +1,6 @@
 import { isSuccess } from 'Utils/handle-form-submit/_isSuccess';
 import { errorsProcessingFromResponse } from 'Utils/errors/errors-processing-from-response';
-import { NEW_PASSWORD_PAGE } from 'Constants/constants';
+import { NEW_PASSWORD_PAGE } from 'Components/start-work/constants/constants';
 import { newPasswordShowMessage } from 'Components/new-password-block/_new-password-show-message';
 
 export function newPasswordResponseHandler(

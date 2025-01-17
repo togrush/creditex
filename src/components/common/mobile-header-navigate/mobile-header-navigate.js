@@ -32,15 +32,24 @@ mobileHeaderMenuIcon.addEventListener('click', (event) => {
 
 export function markActiveHeaderLink() {
   const links = document.querySelectorAll('.mobile-header__main-menu-item-link');
+  const headerTitle = document.querySelector('.mobile-header h4');
 
   if (window.location.pathname === '/') {
     links[0].classList.add('header__main-menu-item-link_this-page');
+    headerTitle.textContent = 'Creditex.Broker';
     return;
   }
 
-  for (let i = 1; i <= links.length; i++) {
+  if (window.location.pathname === '/economicActivity.html') {
+    links[0].classList.add('header__main-menu-item-link_this-page');
+    headerTitle.textContent = 'ВЭД';
+    return;
+  }
+
+  for (let i = 1; i < links.length; i++) {
     if (window.location.pathname.includes(links[i].dataset.pathname)) {
       links[i].classList.add('header__main-menu-item-link_this-page');
+      headerTitle.textContent = links[i].textContent.trim();
       break;
     }
   }

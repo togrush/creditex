@@ -84,11 +84,15 @@ body {
 
 
   &__inner {
+    text-align: center;
     display: flex;
     width: 100%;
     max-width: 459px;
     flex-direction: column;
     row-gap: 32px;
+    padding: 40px;
+    background-color: $olive-gray;
+    border-radius: $radius-medium;
   }
 
   &__controls {

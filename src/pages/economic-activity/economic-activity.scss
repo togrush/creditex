@@ -1,0 +1,37 @@
+@import 'Layouts/public-pages-layout/public-pages-layout.scss';
+
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/form-control-error/form-control-error.scss';
+@import 'UIKit/form-range/form-range.scss';
+
+@import 'Components/offer/offer.scss';
+@import 'Components/how-it-work/how-it-work.scss';
+@import 'Components/special-makes/special-makes.scss';
+@import 'Components/faq/faq.scss';
+@import 'Components/articles/articles.scss';
+@import 'Components/start-work/start-work';
+@import 'Components/payment-processing/payment-processing';
+@import 'Components/producr-cards/product-cards';
+
+
+
+
+.offer__text {
+  max-width: 100%;
+  h1 {
+    font-size: 37px;
+  }
+  p {
+    font-size: 24px;
+    line-height: 130%;
+  }
+}
+
+.products-grid {
+  flex-direction: column-reverse !important;
+
+  .products-row:last-child {
+    flex-direction: row-reverse ;
+
+  }
+}

@@ -1,7 +1,7 @@
 form.registration-form.full-screen-form(id='registration-form', name='registration-form', data-location-href='./confirmation.html', method='POST', action='/auth/?register=yes')
-  h4 Регистрация
 
   .registration-form__inner.full-screen-form__inner
+    h4 Регистрация
     .registration-form__controls.full-screen-form__controls
       include UIKit/form-select/form-select.pug
       +form-select('registration-user-type', [{
@@ -12,15 +12,16 @@ form.registration-form.full-screen-form(id='registration-form', name='registrati
         value: 'borrower'
       }], 'Выберите тип пользователя')(class='registration-form__user-type-control')
       include UIKit/form-control/form-control.pug
+      +form-control('text', 'registration-name', 'Имя')(class='registration-form__name-control', autocomplete='name')
+      +form-control('text', 'registration-last-name', 'Фамилия')(class='registration-form__lastname-control', autocomplete='lastname')
+      +form-control('text', 'registration-second-name', 'Отчество')(class='registration-form__secondname-control', autocomplete='second-name')
       +form-control('text', 'registration-inn', 'ИНН')(class='registration-form__inn-control')
       +form-control('tel', 'registration-phone', 'Телефон')(class='registration-form__phone-control', autocomplete='username')
+      +form-control('text', '', 'E-mail')(class='registration-form__email-control', autocomplete='email')
       include UIKit/form-password/form-password.pug
       +form-control('password', 'registration-password', 'Пароль')(class='registration-form__password-control', autocomplete='current-password')
       +form-control('password', 'registration-repeat-password', 'Повторите пароль')(class='registration-form__password-control', autocomplete='current-password')
-      .registration-form__row.full-screen-form__row
-        include UIKit/form-checkbox/form-checkbox.pug
-        +form-checkbox('registration-remember-user', 'Запомнить меня')(class='registration-form__remember-user-checkbox', checked=true)
-    .registration-form__buttons.full-screen-form__buttons
-      include UIKit/button/button.pug
-      +button('registration-to-auth-button', './authorization.html', 'button', 'secondary', 'Авторизация')(class='registration-form__to-auth-button')
-      +button('registration-come-in-button', '', 'submit', 'primary', 'Войти')(class='registration-form__come-in-button')
+      .registration-form__buttons.full-screen-form__buttons
+        include UIKit/button/button.pug
+        +button('registration-to-auth-button', './authorization.html', 'button', 'secondary', 'Авторизация')(class='registration-form__to-auth-button')
+        +button('registration-come-in-button', '', 'submit', 'primary', 'Войти')(class='registration-form__come-in-button')

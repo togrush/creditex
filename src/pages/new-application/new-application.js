@@ -1,4 +1,4 @@
-import { NEW_APPLICATION_PAGE } from 'Constants/constants';
+import { NEW_APPLICATION_PAGE } from 'Components/start-work/constants/constants';
 import { getControls } from 'Utils/get-controls';
 import { numbersOnly } from 'Utils/masks/numbers-only-mask';
 import { addPhoneMask } from 'Utils/masks/phone-mask';

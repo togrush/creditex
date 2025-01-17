@@ -1,0 +1,56 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'EconomicActivity';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'economicActivity-page';
+
+block styles
+  link(href=require('./economic-activity.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./economic-activity') defer)
+
+block content
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+    'Внешнеэкономическая деятельность (ВЭД) в условиях эмбарго',
+    'Мы являемся официальными партнерами провайдеров платежных решений для участников ВЭД, одобренных банками Российской Федерации',
+    'Наша задача — упростить международные расчеты для вашего бизнеса, обеспечивая удобство, безопасность и юридическую прозрачность.'
+  )
+  include Components/how-it-work/how-it-work.pug
+  +work-steps(
+    [
+      {
+        title: 'Прозрачность процессов',
+        description: 'Все платежи проводятся через надежных партнеров — провайдеров платежных услуг, одобренных банками РФ.',
+        colorClass: 'step-box-green'
+      },
+      {
+        title: 'Юридическая безопасность',
+        description: 'Наши партнеры обеспечивают соблюдение валютного законодательства и полное документальное сопровождение.',
+        colorClass: 'step-box-gray'
+      },
+      {
+        title: 'Экономия времени',
+        description: 'Мы предлагаем готовые решения для эффективного управления расчетами по ВЭД',
+        colorClass: 'step-box-blue'
+      },
+      {
+        title: 'Поддержка',
+        description: 'Наша команда консультирует по всем вопросам, связанным с международными расчетами',
+        colorClass: 'step-box-green'
+      },
+    ],
+    'Почему выбирают нас?'
+  )
+  include Components/start-work/start-work.pug
+  include Components/payment-processing/payment-processing.pug
+  include Components/producr-cards/product-cards.pug
+  include Components/common/register-oneself/register-oneself.pug
+  +register-oneself(
+    "Оставить заявку и получить предложение",
+    "",
+    "Оставить заявку"
+  )

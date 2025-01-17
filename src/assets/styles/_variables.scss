@@ -2,7 +2,7 @@
 $white-1: #fff;
 $white-2: #e7e7e7; // описание в преимуществе таба
 
-$light-gray: #f6f9fc;
+$light-gray: #fafafa;
 
 $black-1: #000;
 $black-2: #0d0b0d;
@@ -10,14 +10,16 @@ $black-3: #080707;
 $black-4: #12141d;
 $black-5: #262726;
 $black-6: #212121;
+$black-7: #292929;
 
-$olive-gray: #d5e2e3; // фон блока "Зарегистрироваться"
+$olive-gray: #ebedec; // фон блока "Зарегистрироваться"
 
-$gray-1: #828d90;
+$gray-1: #555555;
 $gray-2: #737373;
 $gray-3: #515151;
 $gray-4: #f3f4f5; // бэкграунд input rate
 $gray-5: #e5e5e5; // бэкграунд фоновых элементов графика
+$gray-6: #dcdcdcab; // бордер блока с табами
 $gray-6: #dcdcdcab; // бордер блока с табами
 $gray-7: #b2b2b2; // разделитель табов
 $gray-8: #3b3b3b; // текст таба
@@ -39,6 +41,9 @@ $gray-23: #c7c7c7;
 $gray-24: #a0a0a0;
 $gray-25: #dfdfdf;
 $gray-26: #cacaca;
+$gray-27: #828D90;
+$gray-28: #f2f2f2;
+
 
 $yellow-green-1: #e7f79b;
 $yellow-green-2: #dcf472;
@@ -48,6 +53,7 @@ $green-1: #0ed193; // активный пункт главного навига�
 $green-2: #52c41a; // текст статуса "одобрено" в ЛК
 $green-3: #b7eb8f; // бордер статуса "одобрено" в ЛК
 $green-4: #f6ffed; // фон статуса "одобрено" в ЛК
+$green-6: #9AC0AB; // фон статуса "одобрено" в ЛК
 
 $red-1: #e25140;
 $red-2: #ffa39e;
@@ -70,6 +76,7 @@ $background-5: $yellow-green-2;
 $radius-extra-small: 2px;
 $radius-small: 4px;
 $radius-bit-less: 8px;
+$radius-normal: 10px;
 $radius-medium: 16px;
 $radius: 24px;
 
@@ -94,3 +101,8 @@ $tab-card-bg-color: $gray-17;
 // breakpoint
 
 $layout-breakpoint-small: 430px;
+$layout-breakpoint-mobile: 720px;
+$layout-breakpoint-tablet: 870px;
+$layout-breakpoint-desktop: 1000px;
+$layout-breakpoint-large: 1380px;
+

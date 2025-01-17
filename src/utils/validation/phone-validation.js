@@ -1,4 +1,4 @@
-import { RegExps } from 'Constants/reg-exps';
+import { RegExps } from 'Components/start-work/constants/reg-exps';
 
 export function phoneValidation(control) {
   return RegExps.VALID_PHONE.test(

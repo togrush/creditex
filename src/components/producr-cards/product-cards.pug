@@ -1,0 +1,96 @@
+.container
+  .product-line
+    h1.section-title Линейка продуктов
+    .products-grid
+      .products-row
+        .product-card
+          .product-header
+            h2.product-title Кредит
+            span.highlight-badge Ставка: от 2 %
+          .product-content
+            .conditions-list
+              h3.conditions-title Условия:
+              p.conditions-text
+                | • сумма: до 500 млн.
+                br
+                | • срок: до 84 мес.
+                br
+                | • ставка: от 2 %
+                br
+                | • срок рассмотрения: 30 мин.
+            .action-button(data-modal-target="#modal")(tabindex="0" role="button")
+              span.button-text Узнать подробнее
+
+        .product-card
+          .product-header
+            h2.product-title Факторинг
+            span.highlight-badge Ставка - 0.08%
+          .product-content
+            .conditions-list
+              h3.conditions-title Условия:
+              p.conditions-text
+                | • ставка - 0.08%
+                br
+                | • С регрессом и без регресса
+                br
+                | • Открытый и закрытый
+            .action-button(data-modal-target="#modal")(tabindex="0" role="button")
+              span.button-text Узнать подробнее
+
+        .product-card
+          .product-header
+            h2.product-title Лизинг
+            span.highlight-badge Аванс 0%
+          .product-content
+            .conditions-list
+              h3.conditions-title Условия:
+              p.conditions-text
+                | • Аванс 0%
+                br
+                | • до 50 млн
+                br
+                | • до 84 мес
+            .action-button(data-modal-target="#modal")(tabindex="0" role="button")
+              span.button-text Узнать подробнее
+
+      .products-row
+        .product-card
+          .product-header
+            h2.product-title Банковская гарантия
+            span.highlight-badge Выдача за 2 часа
+          .product-content
+            .conditions-list
+              h3.conditions-title Условия:
+              p.conditions-text
+                | • 44-ФЗ, 223-ФЗ, 615-ПП
+                br
+                | • Выдача онлайн за 2 часа — после оплаты комиссии.
+                br
+                | • Без обеспечения и поручительства
+                br
+                | • По форме бенефициара.
+            .action-button(data-modal-target="#modal")(tabindex="0" role="button")
+              span.button-text Узнать подробнее
+
+        .product-card
+          .product-header
+            h2.product-title ВЭД
+            span.highlight-badge Срок проведения - до 3-х дней
+          .product-content
+            .conditions-list
+              h3.conditions-title Условия:
+              p.conditions-text
+                | • срок проведения платежа - до 3 дней
+                br
+                | • проведение импортных и экспортных платежей
+                br
+                | • более 10 валютных пар
+                br
+                | • покрытие - весь Мир
+            include UIKit/button/button.pug
+            +button('', './economicActivity.html', '', 'link', 'Узнать подробнее')
+
+.modal(id="modal" hidden)
+  .modal-content
+    include Components/create-request/create-request-modal.pug
+

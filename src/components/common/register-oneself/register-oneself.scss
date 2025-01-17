@@ -1,18 +1,43 @@
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/form-password/form-password.scss';
+@import 'UIKit/form-checkbox/form-checkbox.scss';
+@import 'UIKit/button/button.scss';
+@import 'UIKit/form-select/form-select.scss';
 .register-oneself {
   &__wrapper {
     display: flex;
-    padding-top: 31px;
-    padding-bottom: 31px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: $olive-gray;
+    gap: 24px;
+    background-color: $green-6;
+    margin-top: 24px;
+    @media (max-width: $layout-breakpoint-tablet) {
+      padding: 16px 24px;
+    }
+  }
+
+  h4 {
+    line-height: 130%;
+    font-weight: 400;
+    text-align: center;
+
+    @media (max-width: $layout-breakpoint-tablet) {
+      font-size: 18px;
+    }
   }
 
   &__button {
-    min-width: 403px;
+    min-width: 451px;
     text-align: center;
-    @media (max-width: $layout-breakpoint-small) {
+    @media (max-width: $layout-breakpoint-tablet) {
       min-width: auto;
+      height: auto;
     }
   }
+}
+
+.register-oneself__button {
 }

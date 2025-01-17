@@ -1,4 +1,4 @@
-import { RECOVERY_PASSWORD_PAGE_CONSTANTS } from 'Constants/constants';
+import { RECOVERY_PASSWORD_PAGE_CONSTANTS } from 'Components/start-work/constants/constants';
 import { numbersOnly } from 'Utils/masks/numbers-only-mask';
 import { resetError } from 'Utils/errors/reset-error';
 import { recoveryPasswordValidation } from 'Components/recovery-password-form/_recovery-password-validation';

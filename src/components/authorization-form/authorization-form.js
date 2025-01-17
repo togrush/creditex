@@ -1,10 +1,10 @@
 import 'UIKit/form-password/form-password';
 import 'Utils/masks/phone-mask';
-import { AUTHORIZATION_PAGE_CONSTANTS } from 'Constants/constants';
+import { AUTHORIZATION_PAGE_CONSTANTS } from 'Components/start-work/constants/constants';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { passwordValidation } from 'Utils/validation/password-validation';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { authorizationResponseHandler } from 'Components/authorization-form/_authorizationResponseHandler';

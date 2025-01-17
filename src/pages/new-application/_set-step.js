@@ -1,4 +1,4 @@
-import { NEW_APPLICATION_PAGE } from 'Constants/constants';
+import { NEW_APPLICATION_PAGE } from 'Components/start-work/constants/constants';
 
 export function setStep(sectionNumber, thisIsSteps = false) {
   if (!thisIsSteps) {

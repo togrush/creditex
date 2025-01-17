@@ -1,6 +1,6 @@
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
-import { NEW_APPLICATION_PAGE } from 'Constants/constants';
+import { ERRORS } from 'Components/start-work/constants/errors';
+import { NEW_APPLICATION_PAGE } from 'Components/start-work/constants/constants';
 import { resetError } from 'Utils/errors/reset-error';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { emailValidation } from 'Utils/validation/email-validation';

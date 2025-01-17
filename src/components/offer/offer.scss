@@ -1,23 +1,31 @@
 @import 'Components/common/mobile-header-navigate/mobile-header-navigate.scss';
 
+
 .offer {
   margin-bottom: 0;
-  @media (max-width: $layout-breakpoint-small) {
+  @media (max-width: $layout-breakpoint-mobile) {
     background-color: $light-gray;
     padding: 12px 0;
   }
 
   &__wrapper {
     display: flex;
-    padding: 90px 90px 22px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    align-items: flex-start;
-    justify-content: space-between;
-    column-gap: 60px;
+    padding: 0px 104px 41px;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
     background-color: $olive-gray;
-    @media (max-width: $layout-breakpoint-small) {
+    background-image: url('./background.jpg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: 25%;
+    min-height: 400px;
+    @media (max-width: $layout-breakpoint-tablet) {
       padding: 18px 21px 16px 26px;
+      border-top-left-radius: 16px !important;
+      border-top-right-radius: 16px !important;
+      height: 611px;
+      background-position-y: 0%;
+      background-position-x: 95%;
     }
   }
 
@@ -25,11 +33,11 @@
     display: flex;
     flex: 0 1 815px;
     flex-direction: column;
-    row-gap: 53px;
+    row-gap: 23px;
     .offer__navigate {
       display: none;
     }
-    @media (max-width: $layout-breakpoint-small) {
+    @media (max-width: $layout-breakpoint-tablet) {
       width: 100%;
       row-gap: 32px;
       .offer__navigate {
@@ -50,6 +58,7 @@
   &__text {
     display: flex;
     flex-direction: column;
+    max-width: 656px;
     row-gap: 32px;
     @media (max-width: $layout-breakpoint-small) {
      row-gap: 16px;
@@ -57,22 +66,36 @@
 
     h1 {
       color: $black-1;
-      @media (max-width: $layout-breakpoint-small) {
-        font-size: 32px;
-        font-weight: 500;
-        line-height: 39px;
+      @media (max-width: $layout-breakpoint-tablet) {
+        display: none;
       }
     }
 
     p {
-      font-size: 20px;
-      line-height: 27px;
+      max-width: 580px;
+      font-size: 32px;
+      line-height: 150%;
+
       color: $gray-1;
-      @media (max-width: $layout-breakpoint-small) {
-        font-size: 16px;
+      @media (max-width: $layout-breakpoint-tablet) {
+        font-size: 18px;
         font-weight: 500;
-        line-height: 19px;
       }
+    }
+  }
+
+  &__description {
+    background-color: #f3f3f3;
+    padding: 32px 24px;
+    border-radius: 25px;
+    max-width: 646px;
+    font-size: 24px;
+    line-height: 130%;
+    @media (max-width: $layout-breakpoint-tablet) {
+      font-size: 16px;
+      font-weight: 500;
+      padding: 14px;
+
     }
   }
 

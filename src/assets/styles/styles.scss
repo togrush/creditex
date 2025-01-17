@@ -11,8 +11,9 @@ html {
 }
 
 .container {
+  max-width: 1440px;
   width: 100%;
-  padding: 0 70px;
+  padding: 0 24px;
   margin: 0 auto;
   @media (max-width: $layout-breakpoint-small) {
     padding: 0 16px;

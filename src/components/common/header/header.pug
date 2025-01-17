@@ -4,6 +4,8 @@ mixin header()
       .header__row
         a.header__logo(href='/')
           include Images/logo.pug
+        a.header__logo-small(href='/')
+          include ../mobile-header-navigate/logoSmall
         nav.header__main-menu
           ul.header__main-menu-list
             include Components/common/header/_main-menu-item.pug
@@ -16,10 +18,21 @@ mixin header()
               href: './entrepreneur.html'
             }, 'header', 'entrepreneur')(class = 'header__main-menu-item-link')
             +main-manu-item({
+              text: 'Агентам',
+              href: './agents.html'
+            }, 'header', 'agents')(class = 'header__main-menu-item-link')
+            +main-manu-item({
               text: 'Партнерам',
               href: './partners.html'
             }, 'header', 'partners')(class = 'header__main-menu-item-link')
+            +main-manu-item({
+              text: 'О нас',
+              href: './aboutUs.html'
+            }, 'header', 'partners')(class = 'header__main-menu-item-link')
+        .header__contact-info
+          a.header__phone(href='tel:+74951915016') 8 (495) 1915016
+          a.header__email(href='mailto:info@creditex.broker') info@creditex.broker
         .header__lk-buttons
           include UIKit/button/button.pug
-          +button('header-lk-entry', './authorization.html', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')
-          +button('lets-start', './registration.html', 'link', 'primary', 'Начать')(class='header__lets-start-button')
+          +button('header-lk-entry', './authorization.html', 'link', 'primary', 'Войти', 'entry')(class='header__lk-entry-button')
+          +button('lets-start', './registration.html', 'link', '_tertiary', 'Регистрация')(class='header__lets-start-button')

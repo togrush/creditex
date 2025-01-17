@@ -13,78 +13,49 @@ block scripts
   script(src=require('./partners.js') defer)
 
 block content
-  include Components/offer/offer.pug
-  include Components/card-issued-block/card-issued-block.pug
-
-  include Components/advantages/advantages.pug
-  +advantages({
-    title: 'Все онлайн и прозрачно',
-    description: 'В реальном времени видите подключенные клиентом продукты',
-  }, '', [
-    {
-      iconName: 'phone',
-      title: 'Договор онлайн',
-      paragraphs: ['Присоединитесь к договору-оферте онлайн'],
-      bordered: true,
-    },
-    {
-      iconName: 'connection',
-      title: 'Подключение за день',
-      paragraphs: ['Подайте заявку утром, и уже вечером можно начать работу'],
-      bordered: true,
-    },
-    {
-      iconName: 'support',
-      title: 'Персональный менеджер',
-      paragraphs: ['Помогает настроить работу, обучить сотрудников, разобраться с заявками'],
-      bordered: true,
-    },
-  ])(class='advantages__wrapper_paddings-74-145')
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+        'Партнерам',
+        'Расширить клиентскую базу с Creditex.Broker',
+        'Наш сервис - это надежный мост между вашими услугами и компаниями, которые в них нуждаются. Мы автоматизируем проверку и подбор заявок, предоставляя вам возможность быстрее находить клиентов и повышать продуктивность вашего бизнеса'
+      )
 
   include Components/how-it-work/how-it-work.pug
-  +howItWork('big')
+  +work-steps(
+    [
+      {
+        title: 'Постоянный поток клиентов',
+        description: 'Получайте качественные заявки от компаний, заинтересованных в финансовых продуктах и услугах',
+        colorClass: 'step-box-green'
+      },
+      {
+        title: 'Эффективная проверка и верификация',
+        description: 'Мы тщательно анализируем потребности клиентов и проверяем их соответствие вашим требованиям',
+        colorClass: 'step-box-gray'
+      },
+      {
+        title: 'Индивидуальный подход',
+        description: 'Подбираем и предоставляем клиентам уникальные условия, соответствующие их запросам',
+        colorClass: 'step-box-blue'
+      },
+      {
+        title: 'Автоматизированный подбор продуктов',
+        description: 'Удобный алгоритм помогает найти и предложить клиентам именно те продукты и решения, которые им необходимы',
+        colorClass: 'step-box-green'
+      },
+      {
+        title: 'Оптимизация и рост вашего бизнеса',
+        description: 'Повышайте уровень конверсии, экономьте время на обработку заявок и масштабируйте свою клиентскую базу',
+        colorClass: 'step-box-gray'
+      },
+    ],
+      'Преимущества сотрудничества с Creditex.Broker'
+    )
+  include Components/common/register-oneself/register-oneself.pug
+  +register-oneself(
+    "Передай поиск финансовых решений",
+    "Creditex.Broker и начните получать предложения",
+    "Скачайте презентацию о сервисе Creditex.Broker"
+  )
 
-  include Components/advantages-numbers/advantages-numbers.pug
-  +advantagesNumbers('Показатели платформы', [
-    {
-      title: '800 сделок',
-      description: 'Более 800 успешных сделок',
-    },
-    {
-      title: '3 млрд',
-      description: 'Выдано более 3 млрд рублей',
-    },
-    {
-      title: '74',
-      description: 'Кредитных организаций',
-    },
-  ])(class='advantages-numbers__wrapper_biggest-paddings')
 
-  section.wrapper-partners-advantage
-    include Components/partners-advantage/partners-advantage.pug
-    +partners-advantage(false, 'cup', 'gray', {
-      title: 'Постоянно растущий уровень вознаграждения',
-      paragraphs: ['Чем больше заемщиков получат одобрение, тем выше будет уровень вознаграждения.']
-    })
-    +partners-advantage(true, 'coins', 'white', {
-      title: 'Автоматический вывод вознаграждения на счет',
-      paragraphs: ['Выплата вознаграждения производится ежемесячно по 15-м числам.']
-    })
-
-    +partners-advantage(false, 'target', 'gray', {
-      title: 'Продукт удобный вам и клиентам',
-      paragraphs: ['Возобновляемая линия займов позволяет клиентам получать любое количество траншей в пределах лимита в любое время, а вам - автоматически получать вознаграждение за каждый транш в течение всего срока ее действия.']
-    })
-
-  include Components/steps/steps.pug
-  +steps('Начните зарабатывать прямо сейчас с Creditex', [
-    'Пройдите регистрацию',
-    'Менеджер свяжется с вами',
-    'Получите доступ в личный кабинет и начните работу',
-  ])
-
-  include Components/partner-calculator/partner-calculator.pug
-
-  include Components/ways-of-working/ways-of-working.pug
-
-  include Components/will-be-available-block/will-be-available-block.pug

@@ -13,44 +13,13 @@ block scripts
   script(src=require('./main.js') defer)
 
 block content
-  include Components/offer/offer.pug
-  include Components/card-issued-block/card-issued-block.pug
-  include Components/about-platform/about-platform.pug
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+      'Creditex.Broker',
+      'Простой и надежный сервис для получения лучших финансовых предложений и расширения партнерских связей',
+      'Creditex.Broker объединяет компании с финансовыми потребностями, агентов и финансовые учреждения для эффективного взаимодействия'
+    )
 
-  include Components/how-it-work/how-it-work.pug
-  +howItWork('small')
-
-  include Components/advantages-numbers/advantages-numbers.pug
-  +advantagesNumbers('', [
-    {
-      title: '800 сделок',
-      description: 'Более 800 успешных сделок',
-    },
-    {
-      title: '3 млрд',
-      description: 'Выдано более 3 млрд рублей',
-    },
-    {
-      title: '74',
-      description: 'Кредитных организаций',
-    },
-  ])(class='advantages-numbers__wrapper_smaller-paddings')
-
-  include Components/advantages/advantages.pug
-  +advantages('', '', [
-    {
-      iconName: 'lock',
-      title: 'Безопасно',
-      paragraphs: ['При передаче данных в банки используются современные технологии шифрования. Все банки имеют лицензии и состоят в реестре Банка России',],
-    },
-    {
-      iconName: 'like',
-      title: 'Удобно',
-      paragraphs: ['Вы заполняете всего 1 анкету, а мы показываем вам уже одобренные предложения. Это удобнее, чем подавать заявки в разные банки самим', 'Весь процесс подачи заявки и управления кредитом доступен онлайн. Никакой бумажной волокиты.'],
-    },
-    {
-      iconName: 'zipper',
-      title: 'Быстро и понятно',
-      paragraphs: ['После регистрации на нашей платформе за Вами автоматически закрепляется персональный менеджер.', 'Мгновенные решения: Забудьте о долгих ожиданиях. Мы предлагаем мгновенные решения по вашей заявке.'],
-    },
-  ])(class='advantages__wrapper_paddings-79-100-27')
+  include Components/partner-cards/partner-cards.pug
+  include Components/producr-cards/product-cards.pug
+  include Components/common/register-oneself/register-oneself.pug

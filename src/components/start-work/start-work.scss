@@ -1,0 +1,76 @@
+.how-to-start {
+  width: 100%;
+  max-width: 1398px;
+  margin-top: 100px;
+
+  img {
+    max-width: 87px;
+  }
+  .section-title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .steps-container {
+    display: flex;
+    gap: 24px;
+    flex-direction: row;
+    align-self: stretch;
+
+    @media (max-width: $layout-breakpoint-desktop) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .step-card {
+    flex: 1 0 0;
+    border-radius: 25px;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &--first {
+      background-color: #EBF0EB;
+    }
+
+    &--second {
+      background-color: #F3F3F3;
+    }
+
+    &--third {
+      background-color: #E0E8EC;
+    }
+
+    img {
+      @media (max-width: $layout-breakpoint-mobile) {
+        max-width: 50px;
+      }
+    }
+
+
+    .step-text {
+      font-size: 37px;
+
+      @media (max-width: $layout-breakpoint-mobile) {
+        font: 500 15px/19.36px;
+      }
+    }
+  }
+
+  @media (max-width: 640px) {
+    padding: 24px 16px;
+
+    .section-title {
+      font-size: 36px;
+    }
+
+    .step-card {
+      padding: 24px 20px;
+
+       .step-text {
+        font-size: 28px;
+      }
+    }
+  }
+}

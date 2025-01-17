@@ -1,6 +1,6 @@
 import { resetError } from 'Utils/errors/reset-error';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { filesValidation } from 'UIKit/form-file-upload/_files-validation';
 import { setFiles } from 'UIKit/form-file-upload/_set-files';
 import { processingAddedFiles } from 'UIKit/form-file-upload/_processing-added-files';

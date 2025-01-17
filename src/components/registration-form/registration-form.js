@@ -1,4 +1,4 @@
-import { REGISTRATION_PAGE_CONSTANTS } from 'Constants/constants';
+import { REGISTRATION_PAGE_CONSTANTS } from 'Components/start-work/constants/constants';
 
 import 'UIKit/form-password/form-password';
 import { numbersOnly } from 'Utils/masks/numbers-only-mask';

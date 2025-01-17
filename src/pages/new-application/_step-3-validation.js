@@ -1,7 +1,7 @@
-import { NEW_APPLICATION_PAGE } from 'Constants/constants';
+import { NEW_APPLICATION_PAGE } from 'Components/start-work/constants/constants';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
-import { RegExps } from 'Constants/reg-exps';
+import { ERRORS } from 'Components/start-work/constants/errors';
+import { RegExps } from 'Components/start-work/constants/reg-exps';
 import { resetError } from 'Utils/errors/reset-error';
 import { radioValidation } from 'Utils/validation/radio-validation';
 

@@ -1,8 +1,8 @@
 import 'UIKit/form-password/form-password';
-import { COMMON_CONSTANTS, NEW_PASSWORD_PAGE } from 'Constants/constants';
+import { COMMON_CONSTANTS, NEW_PASSWORD_PAGE } from 'Components/start-work/constants/constants';
 import { getControls } from 'Utils/get-controls';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { resetError } from 'Utils/errors/reset-error';
 import { handleFormSubmit } from 'Utils/handle-form-submit/handle-form-submit';
 import { newPasswordResponseHandler } from 'Components/new-password-block/_new-password-response-handler';

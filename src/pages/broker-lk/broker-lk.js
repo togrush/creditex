@@ -1,4 +1,4 @@
-import { BROKER_LK_PAGE } from 'Constants/constants';
+import { BROKER_LK_PAGE } from 'Components/start-work/constants/constants';
 import { copyToClipboard } from 'Utils/copy-to-clipboard';
 
 const copyReferralLinkButton = document.getElementById(

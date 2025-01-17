@@ -13,55 +13,45 @@ block scripts
   script(src=require('./entrepreneur.js') defer)
 
 block content
-  include Components/offer/offer.pug
-  include Components/card-issued-block/card-issued-block.pug
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+      'Предпринимателям',
+      'Передайте поиск финансовых решений Creditex.Broker',
+      'Наша команда берет на себя процесс поиска финансовых решенией, используя широкую сеть партнеров на рынке РФ'
+    )
 
-  include Components/advantages/advantages.pug
-  +advantages('', {
-    title: 'Сотрудничество с нами - удобство и выгода.',
-    paragraphs: ['Сотрудничество с нами - удобство и выгода. Наши инструменты легки в использовании и настраиваются под ваши потребности. Благодаря партнерской сети, мы быстро подбираем финансовые продукты для каждого клиента.']
-  }, [
-    {
-      iconName: 'page',
-      title: 'Прозрачность',
-      paragraphs: ['Регламентированный процесс работы'],
-      bordered: true,
-    },
-    {
-      iconName: 'speed',
-      title: 'Скорость',
-      paragraphs: ['Быстрый подбор более 5* кредитных продуктов'],
-      bordered: true,
-    },
-    {
-      iconName: 'credit-card',
-      title: 'Нацеленность на клиента',
-      paragraphs: ['Индивидуальный подбор кредитных программ под Ваши задачи'],
-      bordered: true,
-    },
-  ])(class='advantages__wrapper_paddings-62-74')
-
+  include Components/producr-cards/product-cards.pug
   include Components/how-it-work/how-it-work.pug
-  +howItWork('small')
+  +work-steps(
+    [
+      {
+        title: 'Оставьте заявку',
+        description: 'Укажите свои потребности',
+        colorClass: 'step-box-green'
+      },
+      {
+        title: 'Заключение договора',
+        description: 'Поиск решения',
+        colorClass: 'step-box-gray'
+      },
+      {
+        title: 'Получите одобрение',
+        description: 'Выбирайте подходящий продукт',
+        colorClass: 'step-box-blue'
+      },
+      {
+        title: 'Оплачивайте комиссию',
+        description: 'Завершите сделку с Creditex.Broker',
+        colorClass: 'step-box-green'
+      }
+      ],
+    'Как это работает?'
+  )
 
-  include Components/advantages-numbers/advantages-numbers.pug
-  +advantagesNumbers('Показатели платформы', [
-    {
-      title: '800 сделок',
-      description: 'Более 800 успешных сделок',
-    },
-    {
-      title: '3 млрд',
-      description: 'Выдано более 3 млрд рублей',
-    },
-    {
-      title: '74',
-      description: 'Кредитных организаций',
-    },
-  ])(class='advantages-numbers__wrapper_biggest-paddings')
 
-  include Components/annuity-calculator-block/annuity-calculator-block.pug
-  +annuity-calculator-block('Обычный аннуитетный калькулятор *', '*При 9% годовых')
-
-  include Components/product-line-block/product-line-block.pug
-  include Components/business-requirements/business-requirements.pug
+  include Components/common/register-oneself/register-oneself.pug
+  +register-oneself(
+    "Передай поиск финансовых решений",
+    "Creditex.Broker и начните получать предложения",
+    "Зарегистрироваться как предприниматель"
+  )

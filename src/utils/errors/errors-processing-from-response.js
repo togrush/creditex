@@ -1,4 +1,4 @@
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { showError } from 'Utils/errors/show-error';
 
 export function errorsProcessingFromResponse(

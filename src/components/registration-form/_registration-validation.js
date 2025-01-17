@@ -1,6 +1,6 @@
-import { REGISTRATION_PAGE_CONSTANTS } from 'Constants/constants';
+import { REGISTRATION_PAGE_CONSTANTS } from 'Components/start-work/constants/constants';
 import { showError } from 'Utils/errors/show-error';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 import { phoneValidation } from 'Utils/validation/phone-validation';
 import { resetError } from 'Utils/errors/reset-error';
 import { passwordValidation } from 'Utils/validation/password-validation';
@@ -32,7 +32,8 @@ export function registrationValidation(controls) {
 
     if (
       control.id
-      === REGISTRATION_PAGE_CONSTANTS.registrationFormControls.phoneControl
+      === REGISTRATION_PAGE_CONSTANTS.registrationFormControls.phoneControl || control.id
+      === REGISTRATION_PAGE_CONSTANTS.registrationFormControls.phoneControlModal
     ) {
       resetError(control);
       if (!phoneValidation(control)) {

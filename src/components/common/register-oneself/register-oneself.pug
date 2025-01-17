@@ -1,5 +1,9 @@
-section.section.register-oneself
-  .container
-    .section__wrapper.register-oneself__wrapper
-      include UIKit/button/button.pug
-      +button('register-oneself-button', './registration.html', 'link', 'primary', 'Зарегистрироваться')(class='register-oneself__button')
+mixin register-oneself(title1, title2, buttonText)
+  section.section.register-oneself
+    .container
+      .section__wrapper.register-oneself__wrapper
+        .title-container
+          h4 #{title1}
+          h4 #{title2}
+        include UIKit/button/button.pug
+        +button('register-oneself-button', './registration.html', 'link', 'secondary', buttonText)(class='register-oneself__button')

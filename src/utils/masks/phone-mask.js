@@ -68,7 +68,7 @@ export function addPhoneMask(controls = null) {
   let telControls = [];
 
   if (!controls) {
-    telControls = document.querySelectorAll('input[type="tel"]');
+    telControls = document?.querySelectorAll('input[type="tel"]');
   } else {
     telControls = controls;
   }

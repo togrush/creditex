@@ -1,4 +1,4 @@
-import { NEW_PASSWORD_PAGE } from 'Constants/constants';
+import { NEW_PASSWORD_PAGE } from 'Components/start-work/constants/constants';
 
 export function newPasswordHideMessage() {
   const message = document.getElementById(NEW_PASSWORD_PAGE.message);

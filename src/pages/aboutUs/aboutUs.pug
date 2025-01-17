@@ -1,0 +1,25 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'AboutUs';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'aboutUs-page';
+
+block styles
+  link(href=require('./aboutUs.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./aboutUs.js') defer)
+
+block content
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+        'Кто мы такие?',
+        'Мы — команда профессионалов с многолетним опытом работы на финансовом рынке России. Создав платформу Creditex.Broker, мы стремимся объединить предпринимателей, агентов и партнеров для более эффективного и удобного взаимодействия в сфере финансовых услуг. ',
+      )
+
+  include Components/articles/articles.pug
+  include Components/special-makes/special-makes.pug
+  include Components/faq/faq.pug
+

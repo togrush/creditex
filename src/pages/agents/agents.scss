@@ -1,0 +1,40 @@
+@import 'Layouts/public-pages-layout/public-pages-layout.scss';
+
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/form-control-error/form-control-error.scss';
+@import 'UIKit/form-range/form-range.scss';
+
+@import 'Components/offer/offer.scss';
+@import 'Components/how-it-work/how-it-work.scss';
+@import 'Components/producr-cards/product-cards.scss';
+
+@media (max-width: $layout-breakpoint-small) {
+  .wrapper-partners-advantage {
+    .section:nth-child(2) {
+      .container .partners-advantage__wrapper {
+          height: 520px;
+          .partners-advantage__text-content {
+            position: absolute;
+            top: 24px;
+          }
+          .partners-advantage__image {
+            position: absolute;
+            bottom: 0px;
+            right: 10%;
+            height: 246px;
+            width: 264px;
+          }
+
+
+      }
+    }
+
+    .section:nth-child(3) {
+      .container .partners-advantage__wrapper {
+        img {
+          left: -10%;
+        }
+      }
+    }
+  }
+}

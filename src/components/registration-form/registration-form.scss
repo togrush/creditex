@@ -3,3 +3,20 @@
 @import 'UIKit/form-checkbox/form-checkbox.scss';
 @import 'UIKit/button/button.scss';
 @import 'UIKit/form-select/form-select.scss';
+
+.registration-form {
+  .button {
+    width: 100%;
+    min-height: 50px;
+    border-radius: $radius-small;
+  }
+  &__to-auth-button {
+    background-color: $white-1;
+    align-items: flex-start;
+    line-height: 150%;
+  }
+  &__come-in-button {
+    border: none;
+  }
+}
+

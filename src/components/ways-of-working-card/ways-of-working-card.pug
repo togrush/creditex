@@ -1,8 +1,0 @@
-mixin ways-of-working-card(iconName, cardTitle, cardDescr)
-  article.ways-of-working-card&attributes(attributes)
-    .ways-of-working-card__icon
-      include Components/svg-icon/svg-icon.pug
-      +svgIcon(iconName)
-    .ways-of-working-card__text-content
-      span #{cardTitle}
-      p #{cardDescr}

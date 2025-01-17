@@ -2,7 +2,7 @@ import { phoneValidation } from 'Utils/validation/phone-validation';
 import { showError } from 'Utils/errors/show-error';
 import { sendData } from 'Utils/handle-form-submit/_send-data';
 import { serializeData } from 'Utils/handle-form-submit/_serialize-data';
-import { ERRORS } from 'Constants/errors';
+import { ERRORS } from 'Components/start-work/constants/errors';
 
 export function goToRegistrationPage(offerControl, pagePath) {
   const form = offerControl.closest('form');

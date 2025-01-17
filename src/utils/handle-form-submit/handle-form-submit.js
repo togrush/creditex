@@ -7,9 +7,11 @@ export async function handleFormSubmit(
   url,
   responseHandlerFunction,
   waitResponse,
+  // eslint-disable-next-line default-param-last
   defaultErrorControl = null,
+  successMessage,
 ) {
   const data = serializeData(controlsArrayOrForm);
-  const response = await sendData(method, data, url, waitResponse);
+  const response = await sendData(method, data, url, waitResponse, successMessage);
   responseHandlerFunction(response, controlsArrayOrForm, defaultErrorControl);
 }

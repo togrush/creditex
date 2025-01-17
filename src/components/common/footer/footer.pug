@@ -1,3 +1,39 @@
 footer.footer
   .container
-    p.footer__text Сайт не является банком или МФО, не выдает займов и кредитов. Информация, представленная на сайте оказывает помощь в выборе кредита. Предложение не является офертой. Конечные условия уточняйте при прямом общении с кредиторами
+    .footer-wrapper
+      .navigation
+        nav.header__main-menu
+          ul.header__main-menu-list
+            a.footer__logo(href='/')
+              include ./footer-logo.svg
+            include Components/common/header/_main-menu-item.pug
+            +main-manu-item({
+              text: 'Главная',
+              href: './',
+            }, 'header', '')(class = 'footer__main-menu-item-link')
+            +main-manu-item({
+              text: 'Предпринимателям',
+              href: './entrepreneur.html'
+            }, 'header', 'entrepreneur')(class = 'footer__main-menu-item-link')
+            +main-manu-item({
+              text: 'Агентам',
+              href: './agents.html'
+            }, 'header', 'agents')(class = 'footer__main-menu-item-link')
+            +main-manu-item({
+              text: 'Партнерам',
+              href: './partners.html'
+            }, 'header', 'partners')(class = 'footer__main-menu-item-link')
+            +main-manu-item({
+              text: 'О нас',
+              href: './aboutUs.html'
+            }, 'header', 'partners')(class = 'footer__main-menu-item-link')
+      .contacts
+        span.description Если у вас есть вопросы или вы хотите обсудить возможности сотрудничества, свяжитесь с нами:
+        a.footer__email(href='mailto:info@creditex.broker')
+          include ./email.svg
+        span.footer__address
+          include ./address.svg
+          span Адрес: Москва, ул. Примерная, 1
+        a.footer__phone(href='tel:+74951915016')
+          include ./tel.svg
+    p.footer__text Дисклеймер: Creditex.broker не является оператором финансовой платформы в соответствии с Федеральным законом № 211-ФЗ. Мы предоставляем услуги агентского характера, заключающиеся в привлечении и проверке клиентов для финансовых организаций. Мы не участвуем в заключении финансовых сделок, не предоставляем услуги по обработке платежей и не выполняем функций финансового посредника. Вся информация обрабатывается в соответствии с Федеральным законом № 152-ФЗ “О персональных данных”. Используя наш сервис, вы соглашаетесь с Политикой конфиденциальности и условиями предоставления услуг.

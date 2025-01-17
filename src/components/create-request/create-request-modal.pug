@@ -1,0 +1,10 @@
+.form-container
+  img.form-logo(
+    src=(require('./logo.svg'))
+  )
+  .form-fields
+    form.form-fields#registrationFormModal(action="/issue.php" method="POST")
+      include UIKit/form-control/form-control.pug
+      +form-control('text', 'registration-name-modal', 'Имя')(class='registration-form__name-control', autocomplete='name')
+      +form-control('tel', 'registration-phone-modal', 'Телефон')(class='registration-form__phone-control', autocomplete='username')
+      button.submit-button#comeInButtonModal(type="button") Оставить заявку

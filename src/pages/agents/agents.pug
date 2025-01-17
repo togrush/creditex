@@ -1,0 +1,62 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'Agents';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'agents-page';
+
+block styles
+  link(href=require('./agents.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./agents.js') defer)
+
+block content
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+        'Агентам',
+        'Зарабатывайте совместно с Сreditex.Broker заключая успешные сделки',
+        'Присоединяйтесь к сети наших кредиторов. Привлекайте клиентов и получайте решения более чем из 30 финансовых учреждений, в том числе от платежных агентов'
+      )
+
+
+  include Components/producr-cards/product-cards.pug
+  include Components/how-it-work/how-it-work.pug
+  +work-steps(
+      [
+        {
+          title: 'Заключите агентский договор Creditex.Broker',
+          description: 'Зарегистрируйтесь на сайте. Получите личный кабинет',
+          colorClass: 'step-box-green'
+        },
+        {
+          title: 'Привлекайте клиентов',
+          description: 'Отслеживать статус рассмотрения в своем личном кабинете',
+          colorClass: 'step-box-gray'
+        },
+        {
+          title: 'Получайте предложения для ваших клиентов',
+          description: 'Уникальные условия по каждому запросу',
+          colorClass: 'step-box-blue'
+        },
+        {
+          title: 'Выбор подходящего предложения',
+          description: 'Подберите лучшее предложение для вашего клиента',
+          colorClass: 'step-box-green'
+        },
+        {
+          title: 'Получение комиссии',
+          description: 'Получайте комиссию от сервиса после успешной сделки',
+          colorClass: 'step-box-gray'
+        },
+      ]
+    )
+
+  include Components/common/register-oneself/register-oneself.pug
+  +register-oneself(
+    "Передай поиск финансовых решений ",
+    "Creditex.Broker и начните получать предложения",
+    "Зарегистрироваться как агент"
+  )
+

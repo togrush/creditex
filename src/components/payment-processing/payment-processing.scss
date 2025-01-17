@@ -1,0 +1,64 @@
+.payment-processing {
+  margin-top:  100px;
+
+  @media (max-width: $layout-breakpoint-mobile) {
+    margin-top:  40px;
+  }
+
+  h2, h3, h4 {
+    text-align: center;
+  }
+  .title {
+    margin-bottom: 24px;
+    @media (max-width: $layout-breakpoint-mobile) {
+      font-size: 24px;
+      line-height: 29px;
+
+    }
+  }
+  .subtitle {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 41.6px;
+    margin-bottom: 24px;
+    @media (max-width: $layout-breakpoint-mobile) {
+      font-size: 20px;
+      line-height: 24.2px;
+    }
+  }
+
+  .description {
+    font-size: 24px;
+    line-height: 31.2px;
+    font-weight: 400;
+    margin-bottom: 32px;
+
+    @media (max-width: $layout-breakpoint-mobile) {
+      font-size: 18px;
+      line-height: 22px;
+      margin-bottom: 16px;
+    }
+  }
+
+  img {
+      margin-bottom: 100px;
+  }
+
+  .img-desktop {
+    @media (max-width: $layout-breakpoint-tablet) {
+     display: none;
+    }
+  }
+
+  .img-mobile-second {
+    margin-bottom: 0;
+  }
+
+  .img-mobile, .img-mobile-second {
+    @media (min-width: $layout-breakpoint-tablet) {
+      display: none;
+    }
+  }
+
+}
+

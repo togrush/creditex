@@ -1,7 +1,9 @@
 script(src=require('./mobile-header-navigate') defer)
 .mobile-header
   .mobile-header__logo
-    include Components/common/mobile-header-navigate/mobile-logo.svg
+    img.logo-small(src=require('logoSmall.svg'))
+  .mobile-header__menu-title
+    h4 Главная
   .mobile-header__menu-icon
     include Components/common/mobile-header-navigate/mobile-menu.svg
   .mobile-header__menu
@@ -17,9 +19,20 @@ script(src=require('./mobile-header-navigate') defer)
           href: './entrepreneur.html'
         }, 'header', 'entrepreneur')(class = 'mobile-header__main-menu-item-link')
         +main-manu-item({
+          text: 'Агентам',
+          href: './agents.html'
+        }, 'header', 'agents')(class = 'mobile-header__main-menu-item-link')
+        +main-manu-item({
           text: 'Партнерам',
           href: './partners.html'
         }, 'header', 'partners')(class = 'mobile-header__main-menu-item-link')
+        +main-manu-item({
+          text: 'О нас',
+          href: './aboutUs.html'
+        }, 'header', 'aboutUs')(class = 'mobile-header__main-menu-item-link')
+    .header__contact-info
+      a.header__phone(href='tel:+74951915016') 8 (495) 1915016
+      a.header__email(href='mailto:info@creditex.broker') info@creditex.broker
     .header__lk-buttons
       include UIKit/button/button.pug
       +button('header-lk-entry', './authorization.html', '', 'link', 'Войти', 'entry')(class='header__lk-entry-button')

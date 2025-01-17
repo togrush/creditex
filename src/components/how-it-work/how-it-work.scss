@@ -1,67 +1,165 @@
-.how-it-work {
-  &__wrapper {
-    background-color: $black-4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 78px;
-    padding: 79px 54px 150px;
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/form-password/form-password.scss';
+@import 'UIKit/form-checkbox/form-checkbox.scss';
+@import 'UIKit/button/button.scss';
+@import 'UIKit/form-select/form-select.scss';
+@import 'Components/create-request/create-request';
 
-    @media (max-width: $layout-breakpoint-small) {
-      padding: 40px 16px;
-      row-gap: 24px;
-    }
+.step-number {
+  font-size: 80px;
+  font-weight: 500;
 
-    h2 {
-      color: $white-1;
-      h2 {
-        @media (max-width: $layout-breakpoint-small) {
-          font-weight: 500;
-          font-size: 24px;
-          line-height: 29px;
-        }
-      }
-    }
+  @media (max-width: $layout-breakpoint-mobile) {
+    font-size: 32px;
   }
-  &__scheme-row {
-    @media (max-width: $layout-breakpoint-small) {
-      &_1 {
-        svg {
-          display: none;
-        }
-        content: "";
-        width: 264px;
-        height: 182px;
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('./mobile-how-it-work-scheme--top.svg');
-      }
-      &_2 {
-        svg {
-          display: none;
-        }
-        content: "";
-        width: 264px;
-        height: 403px;
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('./mobile-how-it-work-scheme--bottom-row.svg');
-      }
-      &_3 {
-        svg {
-          display: none;
-        }
-        content: "";
-        width: 264px;
-        height: 712px;
-        display: block;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('./mobile-how-it-work-scheme--big.svg');
-      }
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 95px;
+  @media (max-width: $layout-breakpoint-mobile) {
+    margin-top:  40px;
+  }
+
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 52px;
+  line-height: 130%;
+
+  @media (max-width: $layout-breakpoint-mobile) {
+    font-size: 24px;
+    margin-bottom: 16px;
+
+  }
+}
+
+
+.content-wrapper {
+  width: 100%;
+}
+
+.steps-form-container {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+  justify-content: center;
+  height: 100%;
+
+  @media (max-width: $layout-breakpoint-desktop) {
+    flex-direction: column;
+
+    .form-container {
+      max-width: 100%;
     }
   }
 }
+
+.steps-container {
+  display: flex;
+  min-width: 240px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 100%;
+  @media (max-width: $layout-breakpoint-mobile) {
+    gap: 8px;
+  }
+}
+
+.step-box {
+  border-radius: 16px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 40px 102px;
+  padding: 16px 24px;
+  @media (max-width: $layout-breakpoint-mobile) {
+    gap: 16px;
+  }
+}
+
+.step-box-green {
+  background-color: rgba(235, 240, 235, 1);
+}
+
+.step-box-gray {
+  background-color: rgba(243, 243, 243, 1);
+}
+
+.step-box-blue {
+  background-color: rgba(224, 232, 236, 1);
+}
+
+.step-content {
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  gap: 10px;
+  color: rgba(0, 0, 0, 1);
+  flex: 1;
+  flex-basis: 0;
+
+  @media (max-width: $layout-breakpoint-small) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+
+.step-title {
+  font-size: 24px;
+  font-weight: 600;
+  flex: 1;
+  flex-basis: 0;
+  line-height: 100%;
+  @media (max-width: $layout-breakpoint-mobile) {
+    font-size: 20px;
+  }
+}
+
+.step-description {
+  font-size: 20px;
+  font-weight: 400;
+  flex: 1;
+  flex-basis: 0;
+  line-height: 150%;
+
+  @media (max-width: $layout-breakpoint-mobile) {
+    font-size: 14px;
+    line-height: 100%;
+  }
+}
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  min-width: 200px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3;
+  font-size: 14px;
+}
+
+.toast.visible {
+  opacity: 1;
+}
+
+.toast-success {
+  background-color: #e3f9e5;
+  color: #26890c;
+}
+
+.toast-error {
+  background-color: #ffe5e5;
+  color: #c40000;
+}
+

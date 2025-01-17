@@ -1,0 +1,117 @@
+@import 'UIKit/form-control/form-control.scss';
+@import 'UIKit/form-password/form-password.scss';
+@import 'UIKit/form-checkbox/form-checkbox.scss';
+@import 'UIKit/button/button.scss';
+@import 'UIKit/form-select/form-select.scss';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.modal[aria-hidden="false"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal-content {
+  border-radius: 10px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form-container {
+  border-radius: 16px;
+  background-color: rgba(235, 237, 236, 1);
+  display: flex;
+  max-width: 457px;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 77px 24px;
+
+  @media (max-width: $layout-breakpoint-desktop) {
+    padding: 16px 24px;
+    min-height: 300px;
+  }
+}
+
+
+.form-logo {
+  aspect-ratio: 0.98;
+  object-fit: contain;
+  object-position: center;
+  width: 204px;
+  align-self: center;
+  max-width: 100%;
+
+  @media (max-width: $layout-breakpoint-mobile) {
+    width: 95px;
+    margin-bottom: 28px;
+  }
+}
+
+.form-fields {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: flex-start;
+  @media (max-width: $layout-breakpoint-tablet) {
+    gap: 8px;
+
+  }
+
+}
+
+
+
+.input-group {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  color: #828d90;
+  justify-content: flex-start;
+}
+
+
+
+.form-input {
+  align-self: stretch;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+  gap: 6px;
+  padding: 16px;
+}
+
+.form-input:not(:first-child) {
+  margin-top: 16px;
+}
+
+
+
+.submit-button {
+  border-radius: 10px;
+  background-color: rgba(185, 192, 250, 1);
+  margin-top: 8px;
+  width: 100%;
+  font-size: 16px;
+  overflow: hidden;
+  line-height: 100%;
+  text-align: center;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+}
+

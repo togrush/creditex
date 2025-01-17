@@ -3,6 +3,8 @@
   justify-content: space-between;
   width: 100%;
   position: relative;
+  align-items: center;
+  gap: 8px;
   svg {
     width: 24px;
     height: 24px;
@@ -10,11 +12,33 @@
   &__menu-icon {
     z-index: 3;
     transform: none;
+    min-width: 24px;
+    padding-top: 7px;
+    cursor: pointer;
+  }
+
+  .logo-small {
+    width: 24px;
+  }
+  &__menu-title h4 {
+
+    font-size: 26px;
+  }
+  .header__contact-info {
+    align-items: flex-end;
+    padding: 16px;
+
+  }
+
+  &__menu-title {
+    h4 {
+      font-size: 20px;
+
+    }
   }
   .mobile-header__menu {
     z-index: 2;
-    background-color: $gray-5;
-    opacity: 0.97;
+    background-color: $gray-28;
     border-radius: 30px;
     display: none;
     flex-direction: column;
@@ -22,10 +46,11 @@
     position: absolute;
     right: -12px;
     top: -6px;
+
     .header__main-menu-list {
       display: flex;
       flex-direction: column;
-      padding: 50px 16px;
+      padding: 50px 16px 21px;
       row-gap: 8px;
       align-items: flex-end;
       a {
@@ -33,7 +58,9 @@
       }
       .header__main-menu-item-link_this-page {
         background-color: $white-1;
+        color: #2E2E2E;
         padding: 8px;
+        border-radius: 4px;
         &::after {
           display: none;
         }
@@ -42,10 +69,11 @@
         font-size: 12px;
         font-weight: 500;
         line-height: 15px;
-        padding: 8px;
+        padding: 23px;
         opacity: 1;
       }
     }
+
     .header__lk-buttons {
       flex-direction: column;
       row-gap: 12px;

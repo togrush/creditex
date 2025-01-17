@@ -1,4 +1,6 @@
-export async function sendData(method, data, url, waitResponse) {
+import { showToast } from 'Components/create-request/toast';
+
+export async function sendData(method, data, url, waitResponse, successMessage) {
   let responseJSON = null;
   const params = {
     method: method.toUpperCase(),
@@ -17,8 +19,11 @@ export async function sendData(method, data, url, waitResponse) {
       }
       responseJSON = await response.json();
     }
+    showToast(successMessage);
+
     return responseJSON;
   } catch (e) {
+    showToast('Произошла ошибка, повторите попытку позже', true);
     console.error(e);
     return responseJSON;
   }
