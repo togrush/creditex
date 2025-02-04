@@ -30,29 +30,27 @@ mobileHeaderMenuIcon.addEventListener('click', (event) => {
   }
 });
 
-export function markActiveHeaderLink() {
-  const links = document.querySelectorAll('.mobile-header__main-menu-item-link');
-  const headerTitle = document.querySelector('.mobile-header h4');
 
-  if (window.location.pathname === '/') {
-    links[0].classList.add('header__main-menu-item-link_this-page');
-    headerTitle.textContent = 'Creditex.Broker';
-    return;
-  }
 
-  if (window.location.pathname === '/economicActivity.html') {
-    links[0].classList.add('header__main-menu-item-link_this-page');
-    headerTitle.textContent = 'ВЭД';
-    return;
-  }
 
-  for (let i = 1; i < links.length; i++) {
-    if (window.location.pathname.includes(links[i].dataset.pathname)) {
-      links[i].classList.add('header__main-menu-item-link_this-page');
-      headerTitle.textContent = links[i].textContent.trim();
-      break;
+const pageBody = document.querySelector('.page__body');
+const mobileMenu = document.querySelector('.mobile-header__menu');
+
+// Создаем наблюдатель за изменениями атрибутов
+const observer = new MutationObserver((mutationsList) => {
+  for (const mutation of mutationsList) {
+    if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
+      // Проверяем, изменился ли display на block
+      if (mobileMenu.style.display === 'flex') {
+        pageBody.style.overflow = 'hidden';
+      } else {
+        pageBody.style.overflow = ''; // Возвращаем значение по умолчанию
+      }
     }
   }
-}
+});
 
-markActiveHeaderLink();
+// Начинаем наблюдение за изменениями атрибута style
+observer.observe(mobileMenu, {
+  attributes: true, // отслеживаем изменения атрибутов
+});

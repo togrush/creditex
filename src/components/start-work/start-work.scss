@@ -27,6 +27,7 @@
     border-radius: 25px;
     padding: 40px 32px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     gap: 16px;
 
@@ -43,6 +44,8 @@
     }
 
     img {
+      max-width: 50px;
+
       @media (max-width: $layout-breakpoint-mobile) {
         max-width: 50px;
       }
@@ -50,8 +53,13 @@
 
 
     .step-text {
-      font-size: 37px;
-
+      font-size: 28px;
+      text-align: center;
+      flex-grow: 0.75;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       @media (max-width: $layout-breakpoint-mobile) {
         font: 500 15px/19.36px;
       }

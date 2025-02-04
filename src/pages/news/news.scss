@@ -1,0 +1,21 @@
+@import 'Layouts/public-pages-layout/public-pages-layout.scss';
+
+@import 'Components/offer/offer.scss';
+@import 'Components/articles/articles.scss';
+
+.offer__text {
+  h1 {
+    @media (min-width: $layout-breakpoint-tablet) {
+      max-width: 874px;
+      font-size: 52px;
+    }
+  }
+
+  p {
+    @media (min-width: $layout-breakpoint-tablet) {
+      font-size: 24px;
+      max-width: 100%;
+    }
+
+  }
+}

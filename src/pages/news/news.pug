@@ -1,0 +1,25 @@
+extends Layouts/public-pages-layout/public-pages-layout.pug
+
+block variables
+  - let title = 'News';
+  - let header = true;
+  - let footer = true;
+  - let pageClassName = 'news-page';
+
+block styles
+  link(href=require('./news.scss') rel='stylesheet')
+
+block scripts
+  script(src=require('./news.js') defer)
+
+block content
+  include Components/brokerMain/brokerMain.pug
+  +brokerMain(
+    'Новости',
+    'Будьте в курсе главных финансовых событий в России и Мире вместе с нами',
+    'Creditex.Broker объединяет компании с финансовыми потребностями, агентов и финансовые учреждения для эффективного взаимодействия'
+  )
+
+  include Components/articles/articles.pug
+
+

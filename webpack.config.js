@@ -14,6 +14,7 @@ module.exports = {
     partners: './src/pages/partners/partners.pug',
     agents: './src/pages/agents/agents.pug',
     aboutUs: './src/pages/aboutUs/aboutUs.pug',
+    news: './src/pages/news/news.pug',
     economicActivity: './src/pages/economic-activity/economic-activity.pug',
     authorization: './src/pages/authorization/authorization.pug',
     registration: './src/pages/registration/registration.pug',

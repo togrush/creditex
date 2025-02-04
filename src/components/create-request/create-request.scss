@@ -38,23 +38,27 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: 77px 24px;
-
+  padding: 0px 24px 82px;
   @media (max-width: $layout-breakpoint-desktop) {
-    padding: 16px 24px;
+    padding: 16px 24px 60px;
     min-height: 300px;
   }
 }
 
 
 .form-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 0.98;
   object-fit: contain;
   object-position: center;
   width: 204px;
   align-self: center;
   max-width: 100%;
-
+  margin-top: 40px;
+  margin-bottom: 40px;
+  height: 100%;
   @media (max-width: $layout-breakpoint-mobile) {
     width: 95px;
     margin-bottom: 28px;

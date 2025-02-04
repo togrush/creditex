@@ -1,4 +1,4 @@
-mixin register-oneself(title1, title2, buttonText)
+mixin register-oneself(title1, title2, buttonText, form)
   section.section.register-oneself
     .container
       .section__wrapper.register-oneself__wrapper
@@ -6,4 +6,7 @@ mixin register-oneself(title1, title2, buttonText)
           h4 #{title1}
           h4 #{title2}
         include UIKit/button/button.pug
-        +button('register-oneself-button', './registration.html', 'link', 'secondary', buttonText)(class='register-oneself__button')
+        if !form
+          +button('register-oneself-button', './registration.html', 'link', 'secondary', buttonText)(class='register-oneself__button')
+        else
+          +button('register-oneself-button', '', 'link', 'secondary', buttonText)(class='register-oneself__button' data-modal-target="#modal" tabindex="0" role="button")

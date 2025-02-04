@@ -30,10 +30,13 @@
   font-size: 52px;
   line-height: 130%;
 
+  @media (max-width: $layout-breakpoint-desktop) {
+    font-size: 38px;
+    margin-bottom: 0px;
+  }
   @media (max-width: $layout-breakpoint-mobile) {
     font-size: 24px;
     margin-bottom: 16px;
-
   }
 }
 

@@ -1,7 +1,7 @@
 @import 'UIKit/button/button.scss';
 
 .header {
-  @media (max-width: $layout-breakpoint-tablet) {
+  @media (max-width: 1100px) {
     display: none;
   }
   @mixin header-active-link($after-bg-color) {
@@ -18,8 +18,6 @@
       content: '';
       background-color: $black-1;
     }
-
-
   }
 
   &__logo {
@@ -47,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    gap: 4px;
     .header__phone {
       color: $black-7;
       font-weight: 500;
@@ -87,10 +85,10 @@
     display: flex;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 8px;
+    gap: 28px;
   }
 
 

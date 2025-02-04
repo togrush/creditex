@@ -5,7 +5,7 @@ footer.footer
         nav.header__main-menu
           ul.header__main-menu-list
             a.footer__logo(href='/')
-              include ./footer-logo.svg
+              include ./footerLogo.svg
             include Components/common/header/_main-menu-item.pug
             +main-manu-item({
               text: 'Главная',
@@ -29,11 +29,13 @@ footer.footer
             }, 'header', 'partners')(class = 'footer__main-menu-item-link')
       .contacts
         span.description Если у вас есть вопросы или вы хотите обсудить возможности сотрудничества, свяжитесь с нами:
-        a.footer__email(href='mailto:info@creditex.broker')
+        span.footer__address
           include ./email.svg
+          a.footer__email(href='mailto:info@creditex.broker') info@creditex.broker
         span.footer__address
           include ./address.svg
-          span Адрес: Москва, ул. Примерная, 1
-        a.footer__phone(href='tel:+74951915016')
-          include ./tel.svg
+          span 127106, г. Москва, пр-д Гостиничный, д. 8 к. 1, помещ. 761
+        span.footer__address
+          include ./phone.svg
+          a.footer__phone(href='tel:+74951915016') 8 (495) 19-15-016
     p.footer__text Дисклеймер: Creditex.broker не является оператором финансовой платформы в соответствии с Федеральным законом № 211-ФЗ. Мы предоставляем услуги агентского характера, заключающиеся в привлечении и проверке клиентов для финансовых организаций. Мы не участвуем в заключении финансовых сделок, не предоставляем услуги по обработке платежей и не выполняем функций финансового посредника. Вся информация обрабатывается в соответствии с Федеральным законом № 152-ФЗ “О персональных данных”. Используя наш сервис, вы соглашаетесь с Политикой конфиденциальности и условиями предоставления услуг.

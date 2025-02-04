@@ -56,13 +56,13 @@
     flex-direction: column;
     row-gap: 32px;
     font-size: 85px;
-
     @media (max-width: $layout-breakpoint-small) {
      row-gap: 16px;
     }
 
     h1 {
       color: $black-1;
+      font-weight: bold !important;
       @media (max-width: $layout-breakpoint-tablet) {
         font-size: 32px;
         font-weight: 500;

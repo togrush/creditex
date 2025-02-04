@@ -3,9 +3,13 @@
 
 .offer {
   margin-bottom: 0;
+  @media (max-width: 1100px) {
+    margin-top: 35px;
+    padding: 12px 0;
+
+  }
   @media (max-width: $layout-breakpoint-mobile) {
     background-color: $light-gray;
-    padding: 12px 0;
   }
 
   &__wrapper {
@@ -18,12 +22,10 @@
     background-repeat: no-repeat;
     background-position-x: right;
     background-position-y: 25%;
-    min-height: 400px;
     @media (max-width: $layout-breakpoint-tablet) {
       padding: 18px 21px 16px 26px;
       border-top-left-radius: 16px !important;
       border-top-right-radius: 16px !important;
-      height: 611px;
       background-position-y: 0%;
       background-position-x: 95%;
     }
@@ -37,11 +39,12 @@
     .offer__navigate {
       display: none;
     }
-    @media (max-width: $layout-breakpoint-tablet) {
+    @media (max-width: 1100px) {
       width: 100%;
       row-gap: 32px;
       .offer__navigate {
         display: flex;
+        left: 0;
       }
     }
   }
@@ -66,8 +69,16 @@
 
     h1 {
       color: $black-1;
+      @media (max-width: 1100px) {
+        font-size: 48px;
+      }
+
       @media (max-width: $layout-breakpoint-tablet) {
-        display: none;
+        font-size: 30px;
+      }
+
+      @media (max-width: $layout-breakpoint-small) {
+        font-size: 24px;
       }
     }
 
@@ -79,7 +90,9 @@
       color: $gray-1;
       @media (max-width: $layout-breakpoint-tablet) {
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 600;
+        line-height: 21.78px;
+        color: #828D90;
       }
     }
   }
@@ -93,7 +106,6 @@
     line-height: 130%;
     @media (max-width: $layout-breakpoint-tablet) {
       font-size: 16px;
-      font-weight: 500;
       padding: 14px;
 
     }

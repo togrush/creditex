@@ -2,9 +2,15 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  position: relative;
+  padding: 0 16px;
   align-items: center;
+  background-color: #ebedec;
+  position: fixed;
+  left: 0;
+  top: 0;
   gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
   svg {
     width: 24px;
     height: 24px;
@@ -26,8 +32,10 @@
   }
   .header__contact-info {
     align-items: flex-end;
-    padding: 16px;
-
+    padding: 16px 24px;
+    a {
+      font-size: 26px;
+    }
   }
 
   &__menu-title {
@@ -39,23 +47,34 @@
   .mobile-header__menu {
     z-index: 2;
     background-color: $gray-28;
-    border-radius: 30px;
     display: none;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     position: absolute;
-    right: -12px;
-    top: -6px;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
 
+    @media (max-width: 330px) {
+      padding-right: 0px;
+    }
     .header__main-menu-list {
       display: flex;
       flex-direction: column;
-      padding: 50px 16px 21px;
+      padding: 50px 24px 21px;
       row-gap: 8px;
       align-items: flex-end;
+
+      @media (max-width: $layout-breakpoint-tablet) {
+        padding-top: 62px;
+      }
+
       a {
         padding: 8px;
+        font-size: 26px;
       }
+
       .header__main-menu-item-link_this-page {
         background-color: $white-1;
         color: #2E2E2E;
@@ -66,7 +85,6 @@
         }
       }
       .header__main-menu-item-link {
-        font-size: 12px;
         font-weight: 500;
         line-height: 15px;
         padding: 23px;
@@ -77,8 +95,9 @@
     .header__lk-buttons {
       flex-direction: column;
       row-gap: 12px;
+      padding: 16px 24px;
       margin: initial;
-      padding: 16px;
+      margin-top: auto;
       .button {
         width: 100%;
         text-align: center;

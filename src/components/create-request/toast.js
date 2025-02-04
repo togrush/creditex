@@ -12,6 +12,6 @@ export function showToast(message, isError = false) {
     toastElement.classList.remove('visible');
     setTimeout(() => {
       document.body.removeChild(toastElement);
-    }, 300); // ждём, пока анимация скроет элемент
-  }, 4000);
+    }, 300);
+  }, 5000);
 }

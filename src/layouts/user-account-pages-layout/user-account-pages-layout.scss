@@ -1,6 +1,10 @@
 @import 'Styles/styles';
 @import 'Components/common/user-account-header/user-account-header.scss';
 @import 'Components/common/user-account-footer/user-account-footer.scss';
+@import 'Components/common/footer/footer';
+@import 'Components/common/header/header';
+@import 'Components/common/register-oneself/register-oneself.scss';
+@import 'Components/common/footer/footer';
 
 html,
 body {
@@ -15,7 +19,7 @@ body {
 
 .page__main {
   flex: 1 0 auto;
-
+  min-height: 80vh;
   .section {
     $left-right-paddings: 30px;
 

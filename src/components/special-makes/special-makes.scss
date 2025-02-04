@@ -38,6 +38,10 @@
     flex-basis: 0%;
     padding: 32px 40px;
 
+    @media (max-width: $layout-breakpoint-small) {
+      min-width: 270px;
+    }
+
     &--experience {
       background-color: #E0E8EC;
     }
@@ -56,6 +60,7 @@
       flex-direction: column;
       justify-content: space-between;
       flex: 1;
+      gap: 30px;
     }
 
     .feature-header {
@@ -63,14 +68,22 @@
       width: 100%;
       flex-direction: column;
       font-size: 37px;
-      color: var(--Primary, #000);
       font-weight: 500;
       line-height: 1.3;
+      @media (max-width: $layout-breakpoint-tablet) {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        flex-direction: row;
+        gap: 22px
+      }
+
     }
 
     .feature-icon {
       object-fit: contain;
       object-position: center;
+
 
       &--experience {
         aspect-ratio: 0.94;
@@ -86,14 +99,14 @@
         aspect-ratio: 0.77;
         width: 51px;
       }
+
+      @media (max-width: $layout-breakpoint-tablet) {
+        max-width: 47px;
+      }
     }
 
     .feature-name {
       margin-top: 16px;
-
-      &--innovation {
-        margin-top: 32px;
-      }
     }
 
     .feature-description {
@@ -103,17 +116,7 @@
       line-height: 24px;
       width: 100%;
 
-      &--experience {
-        margin-top: 37px;
-      }
 
-      &--reliability {
-        margin-top: 85px;
-      }
-
-      &--innovation {
-        margin-top: 21px;
-      }
     }
   }
 
