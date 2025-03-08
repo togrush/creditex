@@ -1,0 +1,45 @@
+.cookie-consent
+  .cookie-consent__text
+    | Мы используем файлы cookie для вашего удобства пользования сайтом и повышения качества рекомендаций.
+    a.cookie-consent__link(href="#") Подробнее.
+  button.cookie-consent__button(type="button") Я согласен
+
+.cookie-modal
+  .cookie-modal__content
+    .cookie-modal__text
+      | Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookie (пользовательских данных, содержащих сведения о местоположении; тип, язык и версию ОС; тип, язык и версию браузера; сайт или рекламный сервис, с которого пришел пользователь; тип, язык и разрешение экрана устройства, с которого пользователь обращается к сайту; ip-адрес, с которого пользователь обращается к сайту; сведения о взаимодействии пользователя с web-интерфейсом и службами сайта) в целях аутентификации пользователя на сайте, проведения ретаргетинга, статистических исследований и обзоров. Если вы не хотите, чтобы ваши данные обрабатывались, покиньте сайт.
+    button.cookie-modal__close(type="button") ×
+
+script.
+  document.addEventListener('DOMContentLoaded', function() {
+    const cookieConsent = document.querySelector('.cookie-consent');
+    const cookieModal = document.querySelector('.cookie-modal');
+    const cookieLink = document.querySelector('.cookie-consent__link');
+    const cookieButton = document.querySelector('.cookie-consent__button');
+    const cookieModalClose = document.querySelector('.cookie-modal__close');
+
+    if (localStorage.getItem('cookieConsent') !== 'true') {
+      cookieConsent.style.display = 'flex';
+    }
+
+    cookieLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      cookieModal.style.display = 'block';
+    });
+
+    cookieModalClose.addEventListener('click', function() {
+      cookieModal.style.display = 'none';
+    });
+
+    document.addEventListener('click', function(e) {
+      if (e.target === cookieModal) {
+        cookieModal.style.display = 'none';
+      }
+    });
+
+    cookieButton.addEventListener('click', function() {
+      localStorage.setItem('cookieConsent', 'true');
+      cookieConsent.style.display = 'none';
+    });
+  });
+

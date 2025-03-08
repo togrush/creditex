@@ -7,8 +7,14 @@ html(lang='ru' class='page')
     meta(name='viewport' content='width=device-width, initial-scale=1')
     link(rel="icon" href="assets/favicon/favicon.svg" type="image/svg")
     title #{title}
+
     block styles
+
+    include ../analytics.pug
+
   body(class='page__body')
+    noscript
+      iframe(src="https://www.googletagmanager.com/ns.html?id=GTM-WG57335V" height="0" width="0" style="display:none;visibility:hidden")
 
     if (header)
       include Components/common/header/header.pug
@@ -19,5 +25,8 @@ html(lang='ru' class='page')
 
     if (footer)
       include Components/common/footer/footer.pug
+
+    // Cookie Consent Popup
+    include Components/common/cookies/cookies.pug
 
     block scripts

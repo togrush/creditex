@@ -21,6 +21,11 @@ form.registration-form.full-screen-form(id='registration-form', name='registrati
       include UIKit/form-password/form-password.pug
       +form-control('password', 'registration-password', 'Пароль')(class='registration-form__password-control', autocomplete='current-password')
       +form-control('password', 'registration-repeat-password', 'Повторите пароль')(class='registration-form__password-control', autocomplete='current-password')
+      include UIKit/form-checkbox/form-checkbox.pug
+      .registration-form__checkbox-wrapper
+        +form-checkbox('terms_agreement', 'Я ознакомлен(а) с <a href="/terms" target="_blank" class="checkbox-link">Пользовательским соглашением</a> и принимаю его условия.')(class='authorization-form__remember-user-checkbox', checked=false)
+        +form-checkbox('privacy_policy_consent', 'Я согласен(а) с <a href="/privacy-policy" target="_blank" class="checkbox-link">Политикой конфиденциальности</a> и даю <a href="/data-processing-consent" target="_blank" class="checkbox-link">согласие на обработку моих персональных данных</a>.')(class='authorization-form__remember-user-checkbox', checked=false)
+        +form-checkbox('marketing_emails_consent', 'Я хочу получать <a href="/marketing-offers" target="_blank" class="checkbox-link">рекламные рассылки и специальные предложения</a>.')(class='authorization-form__remember-user-checkbox', checked=false)
       .registration-form__buttons.full-screen-form__buttons
         include UIKit/button/button.pug
         +button('registration-to-auth-button', './authorization.html', 'button', 'secondary', 'Авторизация')(class='registration-form__to-auth-button')

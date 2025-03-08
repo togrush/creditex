@@ -18,5 +18,34 @@
   &__come-in-button {
     border: none;
   }
+
+  &__checkbox-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    label {
+      align-items: flex-start;
+      text-align: left;
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 14px;
+
+      }
+    }
+    input {
+      max-width: 13px;
+      width: 100%;
+      height: 13px;
+    }
+
+    .checkbox-link {
+      font-weight: 500;
+
+      text-decoration: underline; /* Убираем стандартное подчеркивание */
+      color: inherit; /* Наследуем цвет текста */
+    }
+
+  }
 }
 

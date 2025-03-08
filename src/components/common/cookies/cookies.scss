@@ -1,0 +1,80 @@
+// Components/common/cookie-consent/cookie-consent.scss
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.9;
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  z-index: 1000;
+
+  &__text {
+    a {
+    }
+    font-size: 14px;
+  }
+
+  &__link {
+    color: #007AFF;
+    text-decoration: none;
+    margin-left: 4px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__button {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(#ffffff, 10%);
+    }
+  }
+}
+
+.cookie-modal {
+  display: none; // Hidden by default
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}

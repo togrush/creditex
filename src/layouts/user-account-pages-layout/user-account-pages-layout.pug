@@ -8,6 +8,9 @@ html(lang='ru' class='page')
     link(rel="icon" href="assets/favicon/favicon.svg" type="image/svg")
     title #{title}
     block styles
+
+    include ../analytics.pug
+
   body(class='page__body')
 
     include Components/common/user-account-header/user-account-header.pug

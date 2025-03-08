@@ -1,7 +1,8 @@
 script(src=require('./mobile-header-navigate') defer)
 .mobile-header
   .mobile-header__logo
-    img.logo-small(src=require('logoSmall.svg'))
+    a.user-account-header__logo(href='./')
+      img.logo-small(src=require('logoSmall.svg'))
   .mobile-header__menu-title
     h4 Creditex.Broker
   .mobile-header__menu-icon
