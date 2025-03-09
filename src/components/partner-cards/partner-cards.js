@@ -9,6 +9,7 @@ function cardClick() {
     const card = document.querySelector(selector);
     if (card) {
       card.addEventListener('click', () => {
+        console.log(url);
 
         window.location.href = url;
       });

@@ -1,11 +1,10 @@
-// Components/common/cookie-consent/cookie-consent.scss
 .cookie-consent {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 0.9;
-  background-color: #ffffff;
+  background-color: #c7c7c7;
   color: black;
   padding: 10px 20px;
   display: none;
@@ -14,9 +13,12 @@
   gap: 10px;
   z-index: 1000;
 
+  @media (max-width: $layout-breakpoint-mobile) {
+    flex-direction: column;
+    padding: 5px 10px;
+  }
+
   &__text {
-    a {
-    }
     font-size: 14px;
   }
 
@@ -35,6 +37,12 @@
     border-radius: 10px;
     padding: 10px 20px;
     cursor: pointer;
+
+    @media (max-width: $layout-breakpoint-mobile) {
+      padding: 5px 10px;
+      width: 100%;
+    }
+
     &:hover {
       background-color: darken(#ffffff, 10%);
     }

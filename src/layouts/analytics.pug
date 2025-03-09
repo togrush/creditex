@@ -6,12 +6,6 @@ script(type="text/javascript").
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-WG57335V');
 
-// ВК Ретаргетинг
-script(type="text/javascript").
-  !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://vk.com/js/api/openapi.js?173',t.onload=function(){VK.Retargeting.Init("VK-RTRG-1938929-dtZIg"),VK.Retargeting.Hit()},document.head.appendChild(t)}();
-noscript
-  img(src="https://vk.com/rtrg?p=VK-RTRG-1938929-dtZIg" style="position:fixed; left:-999px;" alt="")
-
 // Яндекс Метрика
 script(type="text/javascript").
   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -29,3 +23,9 @@ script(type="text/javascript").
 noscript
   div
     img(src="https://mc.yandex.ru/watch/100238727" style="position:absolute; left:-9999px;" alt="")
+
+// ВК Аналитика
+script(type="text/javascript").
+  !function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src='https://vk.com/js/api/openapi.js?173',t.onload=function(){VK.Retargeting.Init("VK-RTRG-1938929-dtZIg"),VK.Retargeting.Hit()},document.head.appendChild(t)}();
+noscript
+  img(src="https://vk.com/rtrg?p=VK-RTRG-1938929-dtZIg" style="position:fixed; left:-999px;" alt="")
