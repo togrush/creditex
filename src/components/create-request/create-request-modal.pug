@@ -6,9 +6,9 @@
     form.form-fields#registrationFormModal(action="/issue.php" method="POST")
       include UIKit/form-control/form-control.pug
       +form-control('text', 'registration-name-modal', 'Имя')(class='registration-form__name-control', autocomplete='name')
-      +form-control('tel', 'registration-phone-modal', 'Телефон')(class='registration-form__phone-control', autocomplete='username')
+      +form-control('tel', 'registration-phone-modal', 'Телефон')(class='registration-form__phone-control', autocomplete='tel')
       include UIKit/form-checkbox/form-checkbox.pug
       .modal__checkbox-wrapper
         +form-checkbox('terms_agreement', 'Я ознакомлен(а) с <a href="/terms" target="_blank" class="checkbox-link">Пользовательским соглашением</a> и принимаю его условия.')(class='authorization-form__remember-user-checkbox', checked=false)
         +form-checkbox('privacy_policy_consent', 'Я согласен(а) с <a href="/privacy-policy" target="_blank" class="checkbox-link">Политикой конфиденциальности</a> и даю <a href="/data-processing-consent" target="_blank" class="checkbox-link">согласие на обработку моих персональных данных</a>.')(class='authorization-form__remember-user-checkbox', checked=false)
-      button.submit-button#comeInButtonModal(type="button") Оставить заявку
+      button.submit-button#comeInButtonModal(type="button" disabled) Оставить заявку

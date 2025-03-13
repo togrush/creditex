@@ -20,6 +20,10 @@ const registrationForm = document.getElementById(
   REGISTRATION_PAGE_CONSTANTS.registrationForm,
 );
 
+const comeInButton = document.getElementById(REGISTRATION_PAGE_CONSTANTS.comeInButton);
+const termsAgreementCheckbox = document.getElementById('terms_agreement');
+const privacyPolicyConsentCheckbox = document.getElementById('privacy_policy_consent');
+
 addPhoneMask();
 phoneControl.value = new URLSearchParams(window.location.search).get(
   'phoneNumber',
@@ -43,6 +47,17 @@ registrationControls.forEach((control) => {
   }
 });
 
+const updateComeInButtonState = () => {
+  if (termsAgreementCheckbox.checked && privacyPolicyConsentCheckbox.checked) {
+    comeInButton.disabled = false;
+  } else {
+    comeInButton.disabled = true;
+  }
+};
+
+termsAgreementCheckbox.addEventListener('change', updateComeInButtonState);
+privacyPolicyConsentCheckbox.addEventListener('change', updateComeInButtonState);
+
 document
   .getElementById(REGISTRATION_PAGE_CONSTANTS.comeInButton)
   .addEventListener('click', (event) => {
@@ -57,3 +72,4 @@ document
       );
     }
   });
+

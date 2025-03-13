@@ -29,4 +29,4 @@ form.registration-form.full-screen-form(id='registration-form', name='registrati
       .registration-form__buttons.full-screen-form__buttons
         include UIKit/button/button.pug
         +button('registration-to-auth-button', './authorization.html', 'button', 'secondary', 'Авторизация')(class='registration-form__to-auth-button')
-        +button('registration-come-in-button', '', 'submit', 'primary', 'Войти')(class='registration-form__come-in-button')
+        +button('registration-come-in-button', '', 'submit', 'primary', 'Зарегистрироваться')(class='registration-form__come-in-button' disabled)
